@@ -3863,52 +3863,49 @@ input, select, textarea {
     color: #18bfef !important;
 }
 
-/* Ensure submenu appears on hover */
-#nav ul.links li {
-	position: relative; /* Positive relative to allow absolute submenu */
+/* Nav */
+#nav {
+    color: #ffffff;
+    display: flex; /* Keep as is */
+    background: rgba(255, 255, 255, 0.175);
+    height: 4rem;
+    position: relative; /* Allow absolute positioning for submenu */
 }
 
 /* Submenu */
 .submenu {
     display: none; /* Hidden by default */
-    position: absolute;
-    top: 100%; /* Aligns below the parent */
-    left: 0;
-    background-color: rgba(255, 255, 255, 0.175);
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    z-index: 10;
+    position: absolute; /* Position it below the parent */
+    top: 100%; /* Align below the parent item */
+    left: 0; /* Align to the left of the parent */
+    background-color: rgba(255, 255, 255, 0.175); /* Same background as navbar */
+    z-index: 10; /* Above other elements */
 }
 
+#nav ul.links li {
+    position: relative; /* Position relative to allow absolute submenu */
+}
+
+#nav ul.links li:hover .submenu {
+    display: block; /* Show on hover */
+}
+
+/* Additional styling for submenu links */
 .submenu li {
-    padding: 0.5rem 1rem;
+    width: 100%; /* Ensure full width */
 }
 
 .submenu li a {
-    color: #ffffff;
-    text-decoration: none;
-    display: block;
-    padding: 0.5rem 1rem;
+    display: block; /* Block display for full width */
+    padding: 0.5rem 2rem; /* Add some padding for better clickability */
+    color: #ffffff; /* Text color for submenu links */
 }
 
-/* Show submenu on hover of parent li */
-#nav ul.links li:hover .submenu {
-    display: block;
+.submenu li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Background on hover */
 }
 
-/* Social icons */
-#nav ul.icons {
-    -moz-flex-grow: 0;
-    -webkit-flex-grow: 0;
-    -ms-flex-grow: 0;
-    flex-grow: 0;
-    -moz-flex-shrink: 0;
-    -webkit-flex-shrink: 0;
-    -ms-flex-shrink: 0;
-    flex-shrink: 0;
-    margin-bottom: 0;
-}
+/* Other styles... */
 
 
 /* Main */
