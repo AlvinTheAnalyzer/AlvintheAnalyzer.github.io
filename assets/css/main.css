@@ -3734,7 +3734,6 @@ input, select, textarea {
 							color: #18bfef !important;
 						}
 /* Nav */
-
 #nav {
     color: #ffffff;
     display: -moz-flex;
@@ -3808,7 +3807,6 @@ input, select, textarea {
     border-bottom-color: #ffffff;
 }
 
-/* Links styling */
 #nav ul.links {
     display: -moz-flex;
     display: -webkit-flex;
@@ -3833,10 +3831,10 @@ input, select, textarea {
 
 #nav ul.links li {
     display: block;
+    position: relative; /* Position relative to allow absolute submenu */
     padding-left: 0;
 }
 
-/* Main links hover and active styles */
 #nav ul.links li a {
     -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
     -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3865,40 +3863,36 @@ input, select, textarea {
     color: #18bfef !important;
 }
 
-/* Submenu styling */
-#nav ul.links li ul.submenu {
-    display: none; /* Hide submenu by default */
-    position: absolute; /* Ensure it's positioned relative to parent */
-    background-color: rgba(255, 255, 255, 0.9); /* Light background for submenu */
-    padding: 10px 0;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    top: 100%; /* Position below the parent menu */
+/* Submenu */
+.submenu {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%; /* Aligns below the parent */
     left: 0;
-    z-index: 999; /* Ensure it's on top */
+    background-color: rgba(255, 255, 255, 0.175);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    z-index: 10;
 }
 
-#nav ul.links li:hover ul.submenu {
-    display: block; /* Show submenu on hover */
+.submenu li {
+    padding: 0.5rem 1rem;
 }
 
-#nav ul.links li ul.submenu li {
-    list-style-type: none;
-    padding: 5px 20px;
-}
-
-#nav ul.links li ul.submenu li a {
-    color: #1e252d; /* Dark color for submenu links */
-    padding: 10px 20px;
+.submenu li a {
+    color: #ffffff;
     text-decoration: none;
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+/* Show submenu on hover of parent li */
+#nav ul.links li:hover .submenu {
     display: block;
 }
 
-#nav ul.links li ul.submenu li a:hover {
-    background-color: #18bfef; /* Highlight submenu link on hover */
-    color: #ffffff;
-}
-
+/* Social icons */
 #nav ul.icons {
     -moz-flex-grow: 0;
     -webkit-flex-grow: 0;
@@ -3909,15 +3903,6 @@ input, select, textarea {
     -ms-flex-shrink: 0;
     flex-shrink: 0;
     margin-bottom: 0;
-}
-
-/* Media query for responsiveness */
-@media screen and (max-width: 980px) {
-
-    #nav {
-        display: none;
-    }
-
 }
 
 
