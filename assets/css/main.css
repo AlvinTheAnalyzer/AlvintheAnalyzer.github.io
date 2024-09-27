@@ -3863,6 +3863,11 @@ input, select, textarea {
     color: #18bfef !important;
 }
 
+/* Ensure submenu appears on hover */
+#nav ul.links li {
+	position: relative; /* Positive relative to allow absolute submenu */
+}
+
 /* Submenu */
 .submenu {
     display: none; /* Hidden by default */
