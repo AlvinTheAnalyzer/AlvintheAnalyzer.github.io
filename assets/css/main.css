@@ -3678,7 +3678,6 @@ input, select, textarea {
 			border-bottom-color: #ffffff;
 		}
 
-		/* Links styling */
 		#nav ul.links {
 			display: -moz-flex;
 			display: -webkit-flex;
@@ -3705,7 +3704,7 @@ input, select, textarea {
 				display: block;
 				padding-left: 0;
 			}
-				/* Main links hover and active styles */
+
 				#nav ul.links li a {
 					-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 					-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -3733,180 +3732,26 @@ input, select, textarea {
 						#nav ul.links li.active a:hover {
 							color: #18bfef !important;
 						}
-/* Nav */
-#nav {
-    color: #ffffff;
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-transition: -moz-transform 1s ease, opacity 1s ease;
-    -webkit-transition: -webkit-transform 1s ease, opacity 1s ease;
-    -ms-transition: -ms-transform 1s ease, opacity 1s ease;
-    transition: transform 1s ease, opacity 1s ease;
-    background: rgba(255, 255, 255, 0.175);
-    height: 4rem;
-    line-height: 4rem;
-    margin: -4rem auto 0 auto;
-    overflow: hidden;
-    padding: 0 2rem 0 0;
-    position: relative;
-    width: calc(100% - 4rem);
-    max-width: 72rem;
-    z-index: 2;
-}
 
-#nav ul.divided li {
-    border-top-color: #ffffff;
-}
+		#nav ul.icons {
+			-moz-flex-grow: 0;
+			-webkit-flex-grow: 0;
+			-ms-flex-grow: 0;
+			flex-grow: 0;
+			-moz-flex-shrink: 0;
+			-webkit-flex-shrink: 0;
+			-ms-flex-shrink: 0;
+			flex-shrink: 0;
+			margin-bottom: 0;
+		}
 
-#nav ul.icons li a.icon:hover:before {
-    color: #18bfef;
-}
+		@media screen and (max-width: 980px) {
 
-#nav ul.icons.alt li .icon:before {
-    box-shadow: inset 0 0 0 2px #ffffff;
-}
+			#nav {
+				display: none;
+			}
 
-#nav ul.icons.alt li a.icon:hover:before {
-    box-shadow: inset 0 0 0 2px #18bfef;
-}
-
-#nav input, #nav select, #nav textarea {
-    color: #ffffff;
-}
-
-#nav a {
-    color: #ffffff;
-    border-bottom-color: rgba(255, 255, 255, 0.5);
-}
-
-#nav a:hover {
-    border-bottom-color: transparent;
-    color: #18bfef !important;
-}
-
-#nav strong, #nav b {
-    color: #ffffff;
-}
-
-#nav h1, #nav h2, #nav h3, #nav h4, #nav h5, #nav h6 {
-    color: #ffffff;
-}
-
-#nav blockquote {
-    border-left-color: #ffffff;
-}
-
-#nav code {
-    background: rgba(255, 255, 255, 0.075);
-    border-color: #ffffff;
-}
-
-#nav hr {
-    border-bottom-color: #ffffff;
-}
-
-#nav ul.links {
-    display: -moz-flex;
-    display: -webkit-flex;
-    display: -ms-flex;
-    display: flex;
-    -moz-flex-grow: 1;
-    -webkit-flex-grow: 1;
-    -ms-flex-grow: 1;
-    flex-grow: 1;
-    -moz-flex-shrink: 1;
-    -webkit-flex-shrink: 1;
-    -ms-flex-shrink: 1;
-    flex-shrink: 1;
-    font-family: "Source Sans Pro", Helvetica, sans-serif;
-    font-weight: 900;
-    letter-spacing: 0.075em;
-    list-style: none;
-    margin-bottom: 0;
-    padding-left: 0;
-    text-transform: uppercase;
-}
-
-#nav ul.links li {
-    display: block;
-    position: relative; /* Position relative to allow absolute submenu */
-    padding-left: 0;
-}
-
-#nav ul.links li a {
-    -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
-    display: block;
-    font-size: 0.8rem;
-    outline: none;
-    padding: 0 2rem;
-}
-
-#nav ul.links li a:hover {
-    color: inherit !important;
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-#nav ul.links li.active {
-    background-color: #ffffff;
-}
-
-#nav ul.links li.active a {
-    color: #1e252d;
-}
-
-#nav ul.links li.active a:hover {
-    color: #18bfef !important;
-}
-
-/* Nav */
-#nav {
-    color: #ffffff;
-    display: flex; /* Keep as is */
-    background: rgba(255, 255, 255, 0.175);
-    height: 4rem;
-    position: relative; /* Allow absolute positioning for submenu */
-}
-
-/* Submenu */
-.submenu {
-    display: none; /* Hidden by default */
-    position: absolute; /* Position it below the parent */
-    top: 100%; /* Align below the parent item */
-    left: 0; /* Align to the left of the parent */
-    background-color: rgba(255, 255, 255, 0.175); /* Same background as navbar */
-    z-index: 10; /* Above other elements */
-}
-
-#nav ul.links li {
-    position: relative; /* Position relative to allow absolute submenu */
-}
-
-#nav ul.links li:hover .submenu {
-    display: block; /* Show on hover */
-}
-
-/* Additional styling for submenu links */
-.submenu li {
-    width: 100%; /* Ensure full width */
-}
-
-.submenu li a {
-    display: block; /* Block display for full width */
-    padding: 0.5rem 2rem; /* Add some padding for better clickability */
-    color: #ffffff; /* Text color for submenu links */
-}
-
-.submenu li a:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Background on hover */
-}
-
-/* Other styles... */
-
+		}
 
 /* Main */
 
