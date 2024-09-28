@@ -4750,9 +4750,11 @@ input, select, textarea {
 }
 
 .responsive-image {
-    width: 100%; /* Makes the image take the full width of the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Ensures the image does not exceed its container */
-    object-fit: cover; /* Ensures the image covers the container */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 600px; /* Set a maximum width for larger screens */
+    max-height: 400px; /* Set a maximum height to control vertical space */
+    object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
 }
+
 
