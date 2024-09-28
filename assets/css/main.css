@@ -4732,3 +4732,12 @@ input, select, textarea {
 		}
 
 	}
+
+	@media screen and (max-width: 600px) {
+   
+		.project-item {
+       			width: 100%; /* Make each project item take full width on small screens */
+        		margin: 10px 0; /* Adjust margins for better spacing */
+    }
+}
+
