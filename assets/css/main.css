@@ -4740,3 +4740,19 @@ input, select, textarea {
         		margin: 10px 0; /* Adjust margins for better spacing */
     }
 }
+
+.gallery {
+    display: flex;
+    justify-content: center; /* Centers the image in the container */
+    flex-wrap: wrap; /* Allows images to wrap to the next line on smaller screens */
+    overflow: hidden; /* Hides any overflow */
+    max-width: 100%; /* Ensures the gallery does not exceed the viewport */
+}
+
+.responsive-image {
+    width: 100%; /* Makes the image take the full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures the image does not exceed its container */
+    object-fit: cover; /* Ensures the image covers the container */
+}
+
