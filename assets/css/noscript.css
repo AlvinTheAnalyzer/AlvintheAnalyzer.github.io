@@ -34,27 +34,3 @@
 			transform: none;
 			opacity: 1;
 		}
-
-.gallery {
-    display: flex;
-    justify-content: center; /* Centers the image in the container */
-    align-items: center; /* Centers items vertically */
-    flex-wrap: wrap; /* Allows wrapping of images on smaller screens */
-    overflow: hidden; /* Hides any overflow */
-    max-width: 100%; /* Ensures the gallery does not exceed the viewport */
-}
-
-.responsive-image {
-    width: 100%; /* Makes the image take the full width of the container */
-    height: auto; /* Maintains aspect ratio */
-    max-width: 100%; /* Ensures the image does not exceed its container */
-    object-fit: cover; /* Ensures the image covers the container */
-}
-
-@media (max-width: 600px) {
-    .responsive-image {
-        width: 100%; /* Full width on smaller screens */
-        height: auto; /* Maintain aspect ratio */
-    }
-}
-
