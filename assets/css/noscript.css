@@ -34,3 +34,16 @@
 			transform: none;
 			opacity: 1;
 		}
+
+.gallery {
+    display: flex;
+    justify-content: center; /* Centers the image in the container */
+    overflow: hidden; /* Hides any overflow */
+    max-width: 100%; /* Ensures the gallery does not exceed the viewport */
+}
+
+.responsive-image {
+    width: 100%; /* Makes the image take the full width of the container */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 100%; /* Ensures the image does not exceed its container */
+}
