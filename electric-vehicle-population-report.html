@@ -65,7 +65,7 @@
 ALTER TABLE Electric_Vehicle_Population
 ADD Customer_ID INT IDENTITY(1, 1) NOT NULL;
 
-				-- TotalVehicles Eligible
+		-- TotalVehicles Eligible
 SELECT
 	COUNT(Customer_ID) AS TotalVehiclesEligible
 FROM Electric_Vehicle_Population
@@ -91,6 +91,8 @@ ORDER BY TotalVehiclePerType DESC
                 </pre>
 
                 <!-- Findings Section -->
+		 <h2>Data Source</h2>
+                    <p><a href="https://www.kaggle.com/datasets/rajkumarpandey02/electric-vehicle-population-data" target="_blank">Kaggle Dataset Page</a></p>
                 <h2>Findings</h2>
                 <p>
                     After...
