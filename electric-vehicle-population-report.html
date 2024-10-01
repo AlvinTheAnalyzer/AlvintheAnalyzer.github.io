@@ -44,21 +44,50 @@
                 <h2>Dashboard Preview</h2>
                 <div class="gallery">
                     <img src="images/EV_dash.JPG" alt="Main Dashboard" class="responsive-image" style="max-width: 600px; max-height: 400px;" />
-
                     <!-- Add more snapshots as needed -->
                 </div>
+
+                 <div class="post-content">
+                    <p>This project </p>
+                    <h2>Project Objectives</h2>
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
 
                 <!-- SQL Code Section -->
                 <h2>SQL Code</h2>
                 <pre>
+                -- Added a new column as an identifier for each vehicle
+ALTER TABLE Electric_Vehicle_Population
+ADD Customer_ID INT IDENTITY(1, 1) NOT NULL;
+
+				-- TotalVehicles Eligible
+SELECT
+	COUNT(Customer_ID) AS TotalVehiclesEligible
+FROM Electric_Vehicle_Population
+WHERE Clean_Alternative_Fuel_Vehicle_CAFV_Eligibility = 'Clean Alternative Fuel Vehicle Eligible'
+ORDER BY TotalVehiclesEligible DESC;
+
+                -- Brands by Vehicle Type and Total vehicles 
 SELECT 
-    COUNT(*) AS Total_EV,
-    AVG(Price) AS Average_Price,
-    Manufacturer
-FROM 
-    Electric_Vehicles
-GROUP BY 
-    Manufacturer;
+	DISTINCT MAKE AS BEVBrands,
+	COUNT(Model) AS TotalVehiclePerType
+FROM Electric_Vehicle_Population
+WHERE Electric_Vehicle_Type = 'Battery Electric Vehicle (BEV)'
+GROUP BY Make 
+ORDER BY TotalVehiclePerType DESC
+
+SELECT 
+	DISTINCT MAKE AS PHEVBrands,
+	COUNT(Model) AS TotalVehiclePerType
+FROM Electric_Vehicle_Population
+WHERE Electric_Vehicle_Type = 'Plug-in Hybrid Electric Vehicle (PHEV)'
+GROUP BY Make
+ORDER BY TotalVehiclePerType DESC
                 </pre>
 
                 <!-- Findings Section -->
@@ -67,6 +96,14 @@ GROUP BY
                     After...
                     <!-- Add more detailed findings here -->
                 </p>
+            </section>
+
+            <!-- Links Section -->
+                <h2>References</h2>
+                <ul>
+                    <li><a href="https://github.com/AlvinTheAnalyzer/Electric-Car-Population-Report.git" target="_blank">Link to project on GitHub</a></li>
+                    <!-- Add more links as needed -->
+                </ul>
             </section>
 
         </div>
