@@ -1,197 +1,156 @@
-/* Bright Layers Analytics Styles */
+/* Bright Layers Analytics - Full Page Modern Design */
 
 /* General Layout */
 body {
   font-family: 'Arial', sans-serif;
-  line-height: 1.6;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #ffffff;
+  color: #333;
 }
 
-#main {
-  padding: 40px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+main#main {
+  width: 100%;
+  padding: 60px 20px;
+}
+
+/* Sticky Navigation */
+.sticky-nav {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background-color: #000000;
+  z-index: 1000;
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sticky-nav .links li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.sticky-nav .links li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sticky-nav .links li.active a {
+  text-decoration: underline;
 }
 
 /* Hero Section */
-.post {
-  background-color: #ffffff;
-  padding: 60px 40px;
-  margin-bottom: 60px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+.hero-section {
   text-align: center;
+  padding: 80px 20px;
+  margin-bottom: 60px;
 }
 
-.post h1 {
+.hero-section h1 {
   font-size: 3em;
-  color: #333;
   margin-bottom: 20px;
 }
 
-.post p {
+.hero-section p {
   font-size: 1.3em;
-  color: #666;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
 }
 
-/* Service Categories */
-.services {
-  display: flex;
-  flex-direction: column;
-  gap: 60px;
-  margin-bottom: 60px;
+/* Services Section */
+.services-section {
+  max-width: 1200px;
+  margin: 0 auto 60px auto;
 }
 
-.service-category h2 {
-  font-size: 2.2em;
-  color: #333;
-  margin-bottom: 30px;
+.services-section h2 {
   text-align: center;
+  font-size: 2em;
+  margin-bottom: 40px;
 }
 
-.service-cards {
+.services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 40px;
+  padding: 0 20px;
 }
 
-.card {
-  background-color: #ffffff;
-  padding: 30px 20px;
+.service-card {
+  background-color: #f9f9f9;
+  padding: 40px 30px;
   border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card:hover {
+.service-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-.card i {
-  font-size: 2.5em;
-  color: #007BFF;
-  margin-bottom: 20px;
-}
-
-.card h3 {
+.service-card h3 {
   font-size: 1.5em;
-  color: #333;
   margin-bottom: 15px;
 }
 
-.card p {
+.service-card p {
   font-size: 1em;
-  color: #666;
+  line-height: 1.6;
 }
 
-/* PDF Download */
-.pdf-download {
+/* Contact Section */
+.contact-section {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.contact-section .button {
+  padding: 15px 30px;
+  font-size: 1.2em;
+  border-radius: 8px;
+  background-color: #007BFF;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.contact-section .button:hover {
+  background-color: #0056b3;
+}
+
+/* PDF Section */
+.pdf-section {
   text-align: center;
   margin: 60px 0;
 }
 
-.pdf-download .button {
-  background-color: #007BFF;
-  color: #ffffff;
+.pdf-section .button {
   padding: 15px 30px;
-  border-radius: 8px;
-  text-decoration: none;
   font-size: 1.2em;
-  transition: opacity 0.2s;
-}
-
-.pdf-download .button:hover {
-  opacity: 0.9;
-}
-
-/* Contact Form */
-.contact-form {
-  background-color: #ffffff;
-  padding: 50px 40px;
-  border-radius: 12px;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
-  margin-bottom: 60px;
-}
-
-.contact-form h2 {
-  font-size: 2.2em;
-  color: #333;
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.contact-form .form-group {
-  margin-bottom: 25px;
-}
-
-.contact-form label {
-  font-size: 1.2em;
-  color: #333;
-  margin-bottom: 8px;
-  display: block;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 12px 15px;
-  font-size: 1em;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  box-sizing: border-box;
-}
-
-.contact-form button {
   background-color: #28a745;
   color: #ffffff;
-  padding: 15px 25px;
-  border-radius: 8px;
-  font-size: 1.2em;
-  border: none;
-  cursor: pointer;
-  display: block;
-  margin: 0 auto;
-  transition: opacity 0.2s;
-}
-
-.contact-form button:hover {
-  opacity: 0.9;
-}
-
-/* Schedule Meeting */
-.schedule-meeting {
-  text-align: center;
-  margin-bottom: 60px;
-}
-
-.schedule-meeting .button {
-  background-color: #28a745;
-  color: #ffffff;
-  padding: 15px 30px;
-  border-radius: 8px;
   text-decoration: none;
-  font-size: 1.2em;
-  transition: opacity 0.2s;
 }
 
-.schedule-meeting .button:hover {
-  opacity: 0.9;
+.pdf-section .button:hover {
+  background-color: #218838;
 }
 
 /* Footer */
 #footer {
-  background-color: #333;
-  color: #fff;
+  background-color: #000000;
+  color: #ffffff;
   padding: 40px 20px;
   text-align: center;
 }
 
 #footer .icons.alt li a {
-  color: #fff;
+  color: #ffffff;
   margin: 0 10px;
   font-size: 1.5em;
 }
@@ -202,19 +161,15 @@ body {
 
 /* Responsive Adjustments */
 @media screen and (max-width: 768px) {
-  .services {
-    gap: 40px;
-  }
-
-  .card {
-    padding: 25px 15px;
-  }
-
-  .post h1 {
+  .hero-section h1 {
     font-size: 2.2em;
   }
 
-  .service-category h2 {
-    font-size: 1.8em;
+  .services-grid {
+    gap: 30px;
+  }
+
+  .service-card {
+    padding: 30px 20px;
   }
 }
