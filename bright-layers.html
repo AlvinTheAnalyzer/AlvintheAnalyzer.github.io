@@ -6,22 +6,15 @@
   <title>Bright Layers Analytics</title>
   <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/bright-layers.css">
-  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
-  <!-- Header -->
-  <header id="header">
-    <a href="index.html" class="logo">Home</a>
-  </header>
-
-  <!-- Navigation -->
-  <nav id="nav">
+  <!-- Sticky Navigation -->
+  <nav id="nav" class="sticky-nav">
     <ul class="links">
-      <li><a href="index.html">Home</a></li>
+      <li class="active"><a href="bright-layers.html">Services</a></li>
       <li><a href="generic.html">About</a></li>
       <li><a href="elements.html">Projects</a></li>
-      <li class="active"><a href="bright-layers.html">Bright Layers Analytics</a></li>
     </ul>
     <ul class="icons">
       <li><a href="https://www.linkedin.com/in/alvin-hartridge-jr-505317198/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
@@ -30,97 +23,69 @@
   </nav>
 
   <!-- Main Content -->
-  <div id="main">
+  <main id="main">
 
     <!-- Hero Section -->
-    <section class="post">
-      <header class="major">
-        <h1>Bright Layers Analytics</h1>
-        <p>Empowering businesses with data-driven insights for strategic growth.</p>
-      </header>
+    <section class="hero-section">
+      <h1>Bright Layers Analytics</h1>
+      <p>Empowering businesses through actionable data insights and analytics solutions.</p>
     </section>
 
-    <!-- Service Categories -->
-    <section class="services">
-      <div class="service-category">
-        <h2>Short-Term Services</h2>
-        <div class="service-cards">
-          <div class="card">
-            <i class="fas fa-chart-line"></i>
-            <h3>Quick Data Analysis</h3>
-            <p>Rapid analysis to provide immediate insights for decision-making.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-database"></i>
-            <h3>Data Cleaning</h3>
-            <p>Ensure your data is accurate and ready for analysis.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-chart-pie"></i>
-            <h3>Dashboard Creation</h3>
-            <p>Develop interactive dashboards to visualize key metrics.</p>
-          </div>
+    <!-- Services Section -->
+    <section class="services-section">
+
+      <h2>Short-Term Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Data Cleansing & Validation</h3>
+          <p>Quickly prepare datasets for analysis by removing inconsistencies, duplicates, and errors for accurate reporting.</p>
+        </div>
+        <div class="service-card">
+          <h3>Exploratory Data Analysis</h3>
+          <p>Analyze datasets to uncover trends, patterns, and anomalies that inform immediate business decisions.</p>
+        </div>
+        <div class="service-card">
+          <h3>Interactive Dashboard Design</h3>
+          <p>Create clear and actionable dashboards to visualize KPIs and monitor key metrics in real-time.</p>
         </div>
       </div>
 
-      <div class="service-category">
-        <h2>Long-Term Services</h2>
-        <div class="service-cards">
-          <div class="card">
-            <i class="fas fa-cogs"></i>
-            <h3>Data Strategy Development</h3>
-            <p>Craft comprehensive data strategies aligned with business goals.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-users"></i>
-            <h3>Team Training</h3>
-            <p>Equip your team with the skills to leverage data effectively.</p>
-          </div>
-          <div class="card">
-            <i class="fas fa-robot"></i>
-            <h3>Automation Solutions</h3>
-            <p>Implement automation to streamline data processes.</p>
-          </div>
+      <h2>Long-Term Services</h2>
+      <div class="services-grid">
+        <div class="service-card">
+          <h3>Business Intelligence Strategy</h3>
+          <p>Develop scalable analytics strategies to integrate data-driven decision-making across your organization.</p>
+        </div>
+        <div class="service-card">
+          <h3>Predictive Modeling & Analytics</h3>
+          <p>Use historical data to forecast outcomes and identify opportunities for long-term growth.</p>
+        </div>
+        <div class="service-card">
+          <h3>Data Architecture & Automation</h3>
+          <p>Implement efficient data pipelines, automated workflows, and structured systems for continuous insights.</p>
         </div>
       </div>
+
     </section>
 
-    <!-- PDF Download -->
-    <section class="pdf-download">
+    <!-- Contact Section -->
+    <section class="contact-section">
+      <h2>Contact Us</h2>
+      <p>Interested in our services? Reach out directly:</p>
+      <a href="mailto:alvin@brightlayersanalytics.com" class="button primary">Email Bright Layers Analytics</a>
+    </section>
+
+    <!-- PDF Download Section -->
+    <section class="pdf-section">
       <a href="assets/files/Full_Services.pdf" target="_blank" class="button">Download Full Services PDF</a>
     </section>
 
-    <!-- Contact Form -->
-    <section class="contact-form">
-      <h2>Contact Us</h2>
-      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" name="name" id="name" required>
-        </div>
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" name="_replyto" id="email" required>
-        </div>
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea name="message" id="message" rows="4" required></textarea>
-        </div>
-        <button type="submit" class="button">Send Message</button>
-      </form>
-    </section>
-
-    <!-- Schedule Meeting -->
-    <section class="schedule-meeting">
-      <a href="https://calendly.com/YOUR-LINK" target="_blank" class="button">Schedule a Meeting</a>
-    </section>
-
-  </div>
+  </main>
 
   <!-- Footer -->
   <footer id="footer">
     <section>
-      <h3>Social</h3>
+      <h3>Connect</h3>
       <ul class="icons alt">
         <li><a href="https://www.linkedin.com/in/alvin-hartridge-jr-505317198/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
         <li><a href="https://github.com/AlvinTheAnalyzer" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
