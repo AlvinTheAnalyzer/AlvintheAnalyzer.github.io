@@ -1,58 +1,21 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bright Layers Analytics</title>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="assets/css/main.css">
   <link rel="stylesheet" href="assets/css/bright-layers.css">
-  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-  <!-- Font Awesome for icons -->
   <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
-  <style>
-    /* Modern service cards */
-    .services-grid .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
-    .card {
-      background: #fff;
-      padding: 25px;
-      border-radius: 12px;
-      box-shadow: 0 6px 15px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
-    }
-    .card i {
-      margin-bottom: 15px;
-      color: #007BFF;
-    }
-    #contact-form { max-width: 600px; margin: 50px auto; }
-    #contact-form .fields { display: flex; flex-wrap: wrap; gap: 20px; }
-    #contact-form .field { flex: 1 1 100%; display: flex; flex-direction: column; }
-    #contact-form .field.half { flex: 1 1 calc(50% - 10px); }
-    #contact-form input, #contact-form textarea { padding: 10px; border-radius: 6px; border: 1px solid #ccc; }
-    .button { text-decoration: none; padding: 12px 25px; border-radius: 8px; background-color: #007BFF; color: white; display: inline-block; }
-    .button.primary { background-color: #28a745; }
-    .button:hover { opacity: 0.9; }
-  </style>
 </head>
-<body class="is-preload">
-
-<div id="wrapper">
+<body>
 
   <!-- Header -->
   <header id="header">
     <a href="index.html" class="logo">Home</a>
   </header>
 
-  <!-- Nav -->
+  <!-- Navigation -->
   <nav id="nav">
     <ul class="links">
       <li><a href="index.html">Home</a></li>
@@ -66,91 +29,91 @@
     </ul>
   </nav>
 
-  <!-- Main -->
+  <!-- Main Content -->
   <div id="main">
 
-    <!-- Hero -->
+    <!-- Hero Section -->
     <section class="post">
       <header class="major">
         <h1>Bright Layers Analytics</h1>
-        <p>Helping businesses unlock insights through data, with short-term wins and long-term growth strategies.</p>
+        <p>Empowering businesses with data-driven insights for strategic growth.</p>
       </header>
     </section>
 
-    <!-- Services -->
-    <section class="services-grid">
-      <h2>Short-Term Services</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fas fa-database fa-2x"></i>
-          <h3>Quick Data Cleaning</h3>
-          <p>Immediate cleaning and validation for actionable insights.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-line fa-2x"></i>
-          <h3>Dashboards & Reporting</h3>
-          <p>Interactive dashboards to visualize your current KPIs.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-search fa-2x"></i>
-          <h3>Ad Hoc Analysis</h3>
-          <p>Fast, targeted analysis to answer specific business questions.</p>
+    <!-- Service Categories -->
+    <section class="services">
+      <div class="service-category">
+        <h2>Short-Term Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <i class="fas fa-chart-line"></i>
+            <h3>Quick Data Analysis</h3>
+            <p>Rapid analysis to provide immediate insights for decision-making.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-database"></i>
+            <h3>Data Cleaning</h3>
+            <p>Ensure your data is accurate and ready for analysis.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-chart-pie"></i>
+            <h3>Dashboard Creation</h3>
+            <p>Develop interactive dashboards to visualize key metrics.</p>
+          </div>
         </div>
       </div>
 
-      <h2>Long-Term Services</h2>
-      <div class="grid">
-        <div class="card">
-          <i class="fas fa-cogs fa-2x"></i>
-          <h3>Business Analytics Strategy</h3>
-          <p>Develop long-term data strategies aligned with your goals.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-chart-pie fa-2x"></i>
-          <h3>Custom Dashboards</h3>
-          <p>Build and maintain dashboards that evolve with your business.</p>
-        </div>
-        <div class="card">
-          <i class="fas fa-project-diagram fa-2x"></i>
-          <h3>Data Project Management</h3>
-          <p>Manage and implement complex data projects end-to-end.</p>
+      <div class="service-category">
+        <h2>Long-Term Services</h2>
+        <div class="service-cards">
+          <div class="card">
+            <i class="fas fa-cogs"></i>
+            <h3>Data Strategy Development</h3>
+            <p>Craft comprehensive data strategies aligned with business goals.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-users"></i>
+            <h3>Team Training</h3>
+            <p>Equip your team with the skills to leverage data effectively.</p>
+          </div>
+          <div class="card">
+            <i class="fas fa-robot"></i>
+            <h3>Automation Solutions</h3>
+            <p>Implement automation to streamline data processes.</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PDF -->
-    <div style="margin: 40px 0; text-align:center;">
-      <a href="assets/files/Full_Services.pdf" target="_blank" class="button primary">View Full Services PDF</a>
-    </div>
+    <!-- PDF Download -->
+    <section class="pdf-download">
+      <a href="assets/files/Full_Services.pdf" target="_blank" class="button">Download Full Services PDF</a>
+    </section>
 
     <!-- Contact Form -->
-    <section id="contact-form">
+    <section class="contact-form">
       <h2>Contact Us</h2>
       <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-        <div class="fields">
-          <div class="field half">
-            <label for="name">Name</label>
-            <input type="text" name="name" id="name" required />
-          </div>
-          <div class="field half">
-            <label for="email">Email</label>
-            <input type="email" name="_replyto" id="email" required />
-          </div>
-          <div class="field">
-            <label for="message">Message</label>
-            <textarea name="message" id="message" rows="5" required></textarea>
-          </div>
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" name="name" id="name" required>
         </div>
-        <ul class="actions special">
-          <li><button type="submit" class="button primary">Send Message</button></li>
-        </ul>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" name="_replyto" id="email" required>
+        </div>
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea name="message" id="message" rows="4" required></textarea>
+        </div>
+        <button type="submit" class="button">Send Message</button>
       </form>
     </section>
 
     <!-- Schedule Meeting -->
-    <div style="margin: 40px 0; text-align:center;">
-      <a href="https://calendly.com/YOUR-LINK" target="_blank" class="button">📅 Schedule a Meeting</a>
-    </div>
+    <section class="schedule-meeting">
+      <a href="https://calendly.com/YOUR-LINK" target="_blank" class="button">Schedule a Meeting</a>
+    </section>
 
   </div>
 
@@ -165,22 +128,5 @@
     </section>
   </footer>
 
-  <div id="copyright">
-    <ul>
-      <li>&copy; Alvin Hartridge, JR.</li>
-      <li>CREATED & EDITED BY: Alvin Hartridge, JR.</li>
-    </ul>
-  </div>
-
-</div>
-
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
 </body>
 </html>
