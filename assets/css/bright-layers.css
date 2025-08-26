@@ -10,7 +10,7 @@ body {
 }
 
 #main {
-  padding: 20px;
+  padding: 40px 20px;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -18,74 +18,69 @@ body {
 /* Hero Section */
 .post {
   background-color: #ffffff;
-  padding: 40px;
-  margin-bottom: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 60px 40px;
+  margin-bottom: 60px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
 }
 
 .post h1 {
-  font-size: 2.5em;
+  font-size: 3em;
   color: #333;
+  margin-bottom: 20px;
 }
 
 .post p {
-  font-size: 1.2em;
+  font-size: 1.3em;
   color: #666;
 }
 
 /* Service Categories */
 .services {
   display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  margin-bottom: 40px;
-}
-
-.service-category {
-  flex: 1;
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  flex-direction: column;
+  gap: 60px;
+  margin-bottom: 60px;
 }
 
 .service-category h2 {
-  font-size: 2em;
+  font-size: 2.2em;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .service-cards {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
 }
 
 .card {
   background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 30px 20px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
   text-align: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
 .card i {
-  font-size: 2em;
-  color: #007bff;
-  margin-bottom: 15px;
+  font-size: 2.5em;
+  color: #007BFF;
+  margin-bottom: 20px;
 }
 
 .card h3 {
   font-size: 1.5em;
   color: #333;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .card p {
@@ -96,93 +91,130 @@ body {
 /* PDF Download */
 .pdf-download {
   text-align: center;
-  margin-bottom: 40px;
+  margin: 60px 0;
 }
 
 .pdf-download .button {
-  background-color: #007bff;
+  background-color: #007BFF;
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 1.2em;
+  transition: opacity 0.2s;
 }
 
 .pdf-download .button:hover {
-  background-color: #0056b3;
+  opacity: 0.9;
 }
 
 /* Contact Form */
 .contact-form {
   background-color: #ffffff;
-  padding: 40px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin-bottom: 40px;
+  padding: 50px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
 }
 
 .contact-form h2 {
-  font-size: 2em;
+  font-size: 2.2em;
   color: #333;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
 }
 
 .contact-form .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .contact-form label {
   font-size: 1.2em;
   color: #333;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
   display: block;
 }
 
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px 15px;
   font-size: 1em;
   border: 1px solid #ccc;
-  border-radius: 5px;
+  border-radius: 8px;
   box-sizing: border-box;
 }
 
 .contact-form button {
   background-color: #28a745;
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 25px;
+  border-radius: 8px;
   font-size: 1.2em;
   border: none;
   cursor: pointer;
+  display: block;
+  margin: 0 auto;
+  transition: opacity 0.2s;
 }
 
 .contact-form button:hover {
-  background-color: #218838;
+  opacity: 0.9;
 }
 
 /* Schedule Meeting */
 .schedule-meeting {
   text-align: center;
-  margin-bottom: 40px;
+  margin-bottom: 60px;
 }
 
 .schedule-meeting .button {
   background-color: #28a745;
   color: #ffffff;
-  padding: 10px 20px;
-  border-radius: 5px;
+  padding: 15px 30px;
+  border-radius: 8px;
   text-decoration: none;
   font-size: 1.2em;
+  transition: opacity 0.2s;
 }
 
 .schedule-meeting .button:hover {
-  background-color: #218838;
+  opacity: 0.9;
 }
 
 /* Footer */
 #footer {
+  background-color: #333;
+  color: #fff;
+  padding: 40px 20px;
+  text-align: center;
+}
 
-::contentReference[oaicite:0]{index=0}
- 
+#footer .icons.alt li a {
+  color: #fff;
+  margin: 0 10px;
+  font-size: 1.5em;
+}
+
+#footer .icons.alt li a:hover {
+  color: #007BFF;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .services {
+    gap: 40px;
+  }
+
+  .card {
+    padding: 25px 15px;
+  }
+
+  .post h1 {
+    font-size: 2.2em;
+  }
+
+  .service-category h2 {
+    font-size: 1.8em;
+  }
+}
