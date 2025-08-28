@@ -5049,7 +5049,7 @@ body#about-body {
 
 .about-main-header .profile-picture {
     width: 750px; /* Good size for the picture */
-    height: 750px; /* Maintain aspect ratio */
+    height: 1000px; /* Maintain aspect ratio */
     object-fit: cover; /* Cover the area, cropping if necessary */
     border-radius: 8px; /* Slightly rounded corners for the picture */
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
@@ -5156,6 +5156,7 @@ body#about-body {
         font-size: 1.8em;
     }
 }
+
 
 
 
