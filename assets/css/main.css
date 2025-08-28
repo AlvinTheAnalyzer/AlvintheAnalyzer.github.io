@@ -4677,6 +4677,81 @@ input, select, textarea {
 		}
 /* Existing CSS styles */
 
+/* --- Overrides for Projects Page --- */
+
+/* Set a clean white background for the project section */
+#projects-section {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 60px 20px;
+    min-height: 100vh;
+}
+
+/* Center the section content and give it max-width for whitespace */
+#projects-section .inner {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Style the project header */
+#projects-section h1 {
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+/* Ensure project descriptions wrap correctly */
+.project-item p {
+    white-space: normal !important; /* Force text to wrap */
+    word-wrap: break-word !important; /* Break long words */
+    overflow-wrap: break-word !important; /* Modern standard */
+    color: #555555 !important; /* Ensure description is dark gray */
+}
+
+/* Project grid styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project card styling for hover effect and look */
+.project-item {
+    background-color: #f0f0f0; /* Light gray box background */
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #000000;
+    text-decoration: none;
+}
+
+.project-item:hover {
+    transform: translateY(-10px); /* Lift the card slightly */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.project-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-item h2 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
 
 
 
