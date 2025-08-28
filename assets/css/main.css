@@ -4677,39 +4677,93 @@ input, select, textarea {
 		}
 /* Existing CSS styles */
 
-/* --- Overrides for Projects Page --- */
+/* --- Global Styles --- */
+/* (Add to top of your CSS, adjust as needed) */
+body {
+    background-color: #000000; /* Overall site background */
+}
 
-/* Set a clean white background for the project section */
-#projects-section {
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    padding: 60px 20px;
+/* --- Shared Navigation --- */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.sticky-nav .links li {
+    display: inline-block;
+    margin: 0 15px;
+}
+
+.sticky-nav .links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-nav .links li.active a {
+    background-color: #00BFFF;
+    color: #000;
+}
+
+/* --- Home Page Specific Styles --- */
+#hero-split {
     min-height: 100vh;
-}
-
-/* Center the section content and give it max-width for whitespace */
-#projects-section .inner {
-    max-width: 1200px;
-    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6rem 0;
+    background: linear-gradient(135deg, #444444, #000000); /* Restore dark gradient */
+    color: #ffffff;
     text-align: center;
+    position: relative;
+    z-index: 1;
 }
 
-/* Style the project header */
-#projects-section h1 {
+#hero-split .inner {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 75rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#hero-split .content {
+    flex: 1;
+    padding-right: 3rem;
+    text-align: left;
+}
+
+#hero-split .image-half {
+    flex: 0 0 40%;
+    max-width: 400px;
+    text-align: right;
+}
+
+/* --- Projects Page Specific Styles --- */
+body.is-preload #projects-page-content {
+    background-color: #ffffff;
+    color: #000000;
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+body.is-preload #projects-page-content header h1 {
     color: #000000;
     margin-bottom: 2rem;
 }
 
-/* Ensure project descriptions wrap correctly */
-.project-item p {
-    white-space: normal !important; /* Force text to wrap */
-    word-wrap: break-word !important; /* Break long words */
-    overflow-wrap: break-word !important; /* Modern standard */
-    color: #555555 !important; /* Ensure description is dark gray */
-}
-
-/* Project grid styling */
-.projects-grid {
+body.is-preload .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
@@ -4717,9 +4771,8 @@ input, select, textarea {
     margin: 0 auto;
 }
 
-/* Project card styling for hover effect and look */
-.project-item {
-    background-color: #f0f0f0; /* Light gray box background */
+body.is-preload .project-item {
+    background-color: #f0f0f0;
     padding: 30px;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.08);
@@ -4729,28 +4782,43 @@ input, select, textarea {
     text-decoration: none;
 }
 
-.project-item:hover {
-    transform: translateY(-10px); /* Lift the card slightly */
+body.is-preload .project-item:hover {
+    transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-.project-item a {
+body.is-preload .project-item a {
     text-decoration: none;
     color: inherit;
 }
 
-.project-item img {
+body.is-preload .project-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-.project-item h2 {
+body.is-preload .project-item h2 {
     color: #000000;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
+
+/* Fix text wrapping for project descriptions */
+body.is-preload .project-item p {
+    color: #555555;
+    white-space: normal !important;
+    word-wrap: break-word !important;
+    overflow-wrap: break-word !important;
+}
+
+/* --- Ensure consistent wrappers --- */
+/* (Add or modify as needed) */
+#wrapper {
+    background: #000000;
+}
+
 
 
 
