@@ -4717,9 +4717,7 @@ input, select, textarea {
 
 /* Project Description */
 .project-item p {
-    padding: 0 15px; /* Padding for description */
     color: #666; /* Slightly darker gray for text */
-	word-break: break-word;
 }
 
 	@media screen and (max-width: 980px) {
@@ -5016,6 +5014,7 @@ input, select, textarea {
     white-space: normal;
     word-wrap: break-word;
 }
+
 
 
 
