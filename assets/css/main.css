@@ -4677,63 +4677,29 @@ input, select, textarea {
 		}
 /* Existing CSS styles */
 
-/* --- Global Styles --- */
-/* (Add to top of your CSS, adjust as needed) */
+/* --- Home Page Specific Styles (index.html) --- */
+
+/* White background for the whole page */
 body {
-    background-color: #000000; /* Overall site background */
+    background-color: #ffffff;
+    color: #000000;
 }
 
-/* --- Shared Navigation --- */
-.sticky-nav {
-    position: sticky;
-    top: 0;
-    width: 100%;
-    background-color: #000000;
-    color: #fff;
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px 40px;
-}
-
-.sticky-nav .links li {
-    display: inline-block;
-    margin: 0 15px;
-}
-
-.sticky-nav .links li a {
-    color: #fff;
-    text-decoration: none;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.sticky-nav .links li.active a {
-    background-color: #00BFFF;
-    color: #000;
-}
-
-/* --- Home Page Specific Styles --- */
+/* Hero section with Alvin's data and photo */
 #hero-split {
-    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
+    min-height: 100vh;
     padding: 6rem 0;
-    background: linear-gradient(135deg, #444444, #000000); /* Restore dark gradient */
-    color: #ffffff;
-    text-align: center;
-    position: relative;
-    z-index: 1;
+    background-color: #ffffff; /* White background */
 }
 
 #hero-split .inner {
     display: flex;
     flex-direction: row;
     align-items: center;
-    max-width: 75rem;
+    max-width: 1200px;
     width: 90%;
     margin: 0 auto;
 }
@@ -4744,23 +4710,107 @@ body {
     text-align: left;
 }
 
+#hero-split .content h1 {
+    color: #000000;
+}
+
+#hero-split .content p {
+    color: #555555;
+}
+
 #hero-split .image-half {
-    flex: 0 0 40%;
-    max-width: 400px;
+    flex: 0 0 35%; /* Make photo smaller */
     text-align: right;
 }
 
-/* --- Projects Page Specific Styles --- */
-body.is-preload #projects-page-content {
+#hero-split .image-half img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (max-width: 980px) {
+    #hero-split .inner {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #hero-split .image-half {
+        flex: none;
+        max-width: 60%;
+        margin-top: 3rem;
+    }
+
+    #hero-split .content {
+        padding-right: 0;
+        text-align: center;
+    }
+}
+
+/* Highlighted Projects Section */
+#projects-highlight {
+    padding: 60px 20px;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+#projects-highlight h2 {
+    color: #000000;
+    margin-bottom: 2rem;
+}
+
+/* Project Grid */
+#projects-highlight .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Project Card */
+#projects-highlight .project-item {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #000000;
+}
+
+#projects-highlight .project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+#projects-highlight .project-item p {
+    white-space: normal;
+    word-wrap: break-word;
+    color: #555555;
+}
+
+/* --- Projects Page Specific Styles (elements.html) --- */
+body.is-preload {
     background-color: #ffffff;
     color: #000000;
+}
+
+body.is-preload #projects-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     min-height: 100vh;
     padding: 60px 20px;
 }
 
-body.is-preload #projects-page-content header h1 {
-    color: #000000;
+body.is-preload #projects-page-content header {
+    text-align: center;
     margin-bottom: 2rem;
+}
+
+body.is-preload #projects-page-content h1 {
+    color: #000000;
+    font-size: 3em;
 }
 
 body.is-preload .projects-grid {
@@ -4805,7 +4855,6 @@ body.is-preload .project-item h2 {
     margin-bottom: 10px;
 }
 
-/* Fix text wrapping for project descriptions */
 body.is-preload .project-item p {
     color: #555555;
     white-space: normal !important;
@@ -4813,11 +4862,17 @@ body.is-preload .project-item p {
     overflow-wrap: break-word !important;
 }
 
-/* --- Ensure consistent wrappers --- */
-/* (Add or modify as needed) */
+/* --- Navigation Fixes for All Pages --- */
 #wrapper {
-    background: #000000;
+    background: #ffffff;
 }
+
+#nav {
+    display: none; /* Hide old nav if still present */
+}
+
+
+
 
 
 
