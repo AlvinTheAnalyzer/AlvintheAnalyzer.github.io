@@ -5058,7 +5058,7 @@ body#about-body {
 .about-main-header .header-text h2 {
     font-size: 3em; /* Make the title bold and prominent */
     margin-bottom: 0.2em; /* Space between title and subtitle */
-    color: #333; /* Darker color for prominence */
+    color: #000000; /* Darker color for prominence */
 }
 
 .about-main-header .header-text p {
@@ -5156,6 +5156,7 @@ body#about-body {
         font-size: 1.8em;
     }
 }
+
 
 
 
