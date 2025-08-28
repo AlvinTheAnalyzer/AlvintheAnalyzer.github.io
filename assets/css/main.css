@@ -3234,7 +3234,7 @@ input, select, textarea {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #212931; /* Base dark color */
+    background-color: #000000; /* Base dark color */
     /* Remove the 'url("../../images/bg.jpg")' part and adjust sizes/positions */
     background-image: url("../../images/overlay.png"), linear-gradient(0deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1));
     background-size: auto, auto;
@@ -4959,6 +4959,7 @@ input, select, textarea {
 }
 
 /* --- End of Project Section Styling --- */
+
 
 
 
