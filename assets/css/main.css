@@ -4677,23 +4677,119 @@ input, select, textarea {
 		}
 /* Existing CSS styles */
 
-/* --- Homepage Sections (index.html) --- */
-/* -------------------------------------- */
+/* ===================================================================== */
+/* === GLOBAL & SHARED STYLES === */
+/* ===================================================================== */
 
-/* Reset overall background to white */
-body#index-body {
+/* Global body styling and reset */
+body {
     background-color: #ffffff;
     color: #000000;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
-/* Home hero section (Alvin's data and photo) */
+/* Shared sticky navigation bar */
+.sticky-nav {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 10000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px 40px;
+}
+
+.sticky-nav ul.links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav ul.links li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.sticky-nav ul.links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-nav ul.links li.active a {
+    background-color: #00BFFF;
+    color: #000;
+}
+
+/* Base project grid styling */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Base project card styling */
+.project-item {
+    background-color: #f0f0f0;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #000000;
+    text-decoration: none;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.project-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-item h2 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.project-item p {
+    color: #555555;
+    white-space: normal; /* Ensure text wraps */
+    word-wrap: break-word; /* Break long words */
+}
+
+.project-item a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ===================================================================== */
+/* === HOMEPAGE SPECIFIC STYLES (index.html) === */
+/* ===================================================================== */
+
+/* Hero section with Alvin's data and photo */
 #hero-split {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 6rem 0;
-    background-color: #ffffff;
+    background-color: #ffffff; /* White background */
 }
 
 #hero-split .inner {
@@ -4716,14 +4812,15 @@ body#index-body {
 }
 
 #hero-split .image-half {
-    flex: 0 0 30%;
+    flex: 0 0 30%; /* Smaller photo */
+    max-width: 350px;
     text-align: right;
 }
 
 #hero-split .image-half img {
     max-width: 100%;
     height: auto;
-    border-radius: 8px; /* Added for consistency */
+    border-radius: 8px;
 }
 
 @media screen and (max-width: 980px) {
@@ -4734,8 +4831,9 @@ body#index-body {
 
     #hero-split .image-half {
         flex: none;
-        max-width: 60%;
+        max-width: 50%;
         margin-top: 3rem;
+        text-align: center;
     }
 
     #hero-split .content {
@@ -4764,39 +4862,26 @@ body#index-body {
     margin: 0 auto;
 }
 
-#projects-highlight .project-item {
-    background-color: #f0f0f0;
-    padding: 30px;
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
+#projects-highlight .project-item img {
+    width: 100%; /* Make sure project images scale correctly */
+    height: auto;
+}
+
+
+/* ===================================================================== */
+/* === PROJECTS PAGE SPECIFIC STYLES (elements.html) === */
+/* ===================================================================== */
+
+/* This targets the <body> tag specifically on the projects page to avoid conflicts */
+body.is-preload {
+    background-color: #ffffff;
     color: #000000;
 }
 
-#projects-highlight .project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-#projects-highlight .project-item p {
-    color: #555555;
-    white-space: normal;
-    word-wrap: break-word;
-}
-
-/* --- Projects Page Sections (elements.html) --- */
-/* ----------------------------------------------- */
-
-/* Wrapper and body for projects page to set white background */
-body#elements-body {
-    background-color: #ffffff !important;
-    color: #000000;
-}
-
-/* Ensure the main projects section fills the viewport */
+/* Main content area for projects page */
 #projects-page-content {
     min-height: 100vh;
-    padding-top: 60px; /* Space for the navigation bar */
+    padding-top: 100px; /* Space from sticky nav */
     padding-bottom: 60px;
     background-color: #ffffff;
 }
@@ -4807,113 +4892,15 @@ body#elements-body {
     text-align: center;
 }
 
-/* Centered title for projects page */
+/* Title on projects page */
 #projects-page-content h1 {
     color: #000000;
     font-size: 3em;
     margin-bottom: 2rem;
+    padding-top: 2rem; /* Add space between nav and title */
 }
 
-/* Grid styling for all project items on the projects page */
-#projects-page-content .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-    margin: 0 auto;
-}
 
-/* Styling for project cards on the projects page */
-#projects-page-content .project-item {
-    background-color: #f0f0f0;
-    padding: 30px;
-    border-radius: 12px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: left;
-    color: #000000;
-    text-decoration: none;
-}
-
-#projects-page-content .project-item:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.2);
-}
-
-#projects-page-content .project-item a {
-    text-decoration: none;
-    color: inherit;
-}
-
-#projects-page-content .project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-#projects-page-content .project-item h2 {
-    color: #000000;
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-/* Ensure project descriptions wrap correctly on projects page */
-#projects-page-content .project-item p {
-    color: #555555;
-    white-space: normal !important;
-    word-wrap: break-word !important;
-    overflow-wrap: break-word !important;
-}
-
-/* --- Navigation Fixes for All Pages --- */
-/* -------------------------------------- */
-#nav {
-    display: none !important;
-}
-
-.sticky-nav {
-    display: flex !important;
-    justify-content: center !important;
-    position: fixed !important; /* Fixed position to stay on top */
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    background-color: #000000;
-    color: #fff;
-    z-index: 10000;
-    padding: 15px 40px;
-}
-
-.sticky-nav ul.links {
-    display: flex;
-    margin: 0;
-    padding: 0;
-}
-
-.sticky-nav ul.links li {
-    list-style: none;
-    margin: 0 15px;
-}
-
-.sticky-nav ul.links li a {
-    text-decoration: none;
-    color: #fff;
-    padding: 6px 12px;
-    border-radius: 6px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.sticky-nav ul.links li.active a {
-    background-color: #00BFFF;
-    color: #000;
-}
-
-@media screen and (max-width: 768px) {
-    .sticky-nav {
-        padding: 10px 20px;
-    }
-}
 
 
 
