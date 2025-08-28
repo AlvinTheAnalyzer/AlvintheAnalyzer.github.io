@@ -4993,6 +4993,7 @@ input, select, textarea {
 
 .project-item p {
 	padding: 0 15px;
+	white-space: normal; /* Force text to wrap normally */
     color: #555555; /* Dark gray for readability */
 	overflow-wrap: break-word; /* Use modern standard for text wrapping */
 }
@@ -5025,6 +5026,7 @@ input, select, textarea {
         margin: 10px 0;
     }
 }
+
 
 
 
