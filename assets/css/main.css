@@ -4757,4 +4757,128 @@ input, select, textarea {
     object-fit: cover; /* Ensures the image covers the container while maintaining aspect ratio */
 }
 
+/* --- New Additions for Hero Section & White Space --- */
+
+/* Full-page Hero Section Base */
+#hero-split {
+    display: flex; /* Use flexbox for easy content alignment */
+    align-items: center; /* Center content vertically */
+    justify-content: center; /* Center content horizontally */
+    min-height: 100vh; /* Make it full viewport height */
+    padding: 6rem 0; /* Add top/bottom padding for whitespace */
+    background-color: #f8f8f8; /* A light background for contrast and whitespace effect */
+    color: #212931; /* Ensure text is readable on light background */
+    text-align: center; /* Center text within its container initially */
+    position: relative; /* For absolute positioning of elements if needed later */
+    z-index: 1; /* Ensure it's above other elements if backgrounds overlap */
+}
+
+    /* Inner container for content and image, creating the split */
+    #hero-split .inner {
+        display: flex;
+        flex-direction: row; /* Arrange content and image side-by-side */
+        align-items: center; /* Align items vertically in the middle */
+        max-width: 75rem; /* Max width to control content flow */
+        width: 90%; /* Responsive width */
+        margin: 0 auto; /* Center the inner container */
+    }
+
+        /* Content (text) half of the hero */
+        #hero-split .content {
+            flex: 1; /* Takes up available space */
+            padding-right: 3rem; /* Spacing between text and image */
+            text-align: left; /* Align text to the left */
+        }
+
+            #hero-split .content h1 {
+                font-size: 4.5rem; /* Larger heading for impact */
+                line-height: 1.1;
+                margin-bottom: 1.5rem;
+                color: #212931; /* Ensure heading color is visible */
+            }
+
+            #hero-split .content p {
+                font-size: 1.25rem; /* Larger paragraph text */
+                line-height: 1.8;
+                margin-bottom: 2rem;
+                color: #555;
+            }
+
+            #hero-split .content .actions {
+                text-align: left; /* Align buttons to the left */
+            }
+
+
+        /* Image half of the hero */
+        #hero-split .image-half {
+            flex: 0 0 40%; /* Fixed width for the image side, adjust as needed */
+            max-width: 400px; /* Max width for image to prevent excessive scaling */
+            text-align: right; /* Align image to the right within its half */
+        }
+
+            #hero-split .image-half img {
+                width: 100%; /* Make image fill its container */
+                height: auto;
+                display: block; /* Remove extra space below image */
+                border-radius: 8px; /* Slightly rounded corners for the image */
+                box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+            }
+
+/* Adjustments for smaller screens */
+@media screen and (max-width: 980px) {
+    #hero-split .inner {
+        flex-direction: column; /* Stack content and image vertically on smaller screens */
+        text-align: center;
+    }
+
+    #hero-split .content {
+        padding-right: 0;
+        margin-bottom: 3rem; /* Space between content and image when stacked */
+        text-align: center; /* Center text when stacked */
+    }
+
+    #hero-split .content .actions {
+        text-align: center; /* Center buttons when stacked */
+    }
+
+    #hero-split .image-half {
+        flex: none; /* Remove fixed width */
+        width: 70%; /* Adjust image width for smaller screens */
+        max-width: 300px; /* Max width for smaller screens */
+        margin: 0 auto; /* Center image */
+    }
+
+    #hero-split .content h1 {
+        font-size: 3rem; /* Adjust heading size for mobile */
+    }
+
+    #hero-split .content p {
+        font-size: 1rem; /* Adjust paragraph size for mobile */
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #hero-split {
+        min-height: auto; /* Allow hero to shrink if content is too tall */
+        padding: 4rem 0;
+    }
+
+    #hero-split .image-half {
+        width: 90%;
+    }
+}
+
+
+/* General white space control for sections */
+.section-padded {
+    padding: 5rem 0; /* Consistent vertical padding for sections */
+    background-color: #ffffff; /* White background for projects section */
+}
+
+/* Ensure projects section has space */
+#projects-section {
+    background-color: #ffffff; /* Ensure white background here too */
+}
+
+
 
