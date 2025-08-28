@@ -145,7 +145,9 @@ input, select, textarea {
 		}
 
 	body {
-		color: #212931;
+		color: #000000;
+		color: #ffffff; /* Set default text color to white for readability */
+		
 	}
 
 	body, input, select, textarea {
@@ -4959,6 +4961,7 @@ input, select, textarea {
 }
 
 /* --- End of Project Section Styling --- */
+
 
 
 
