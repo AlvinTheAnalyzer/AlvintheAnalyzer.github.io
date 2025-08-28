@@ -57,9 +57,9 @@ body {
   text-align: center;
   padding: 100px 20px;
   margin-bottom: 60px;
-  /* Use a professional, subtle gradient here */
-  background: linear-gradient(135deg, #f0f2f5, #e0e6ec);
-  color: #333; /* Dark text for readability on a light background */
+  /* Use a professional grey and black gradient */
+  background: linear-gradient(135deg, #444444, #000000);
+  color: #fff; /* White text for readability on a dark background */
   border-radius: 12px;
 }
 
