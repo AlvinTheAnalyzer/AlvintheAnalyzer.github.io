@@ -3623,9 +3623,11 @@ input, select, textarea {
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
-		width: calc(100% - 4rem);
-		max-width: 72rem;
+		width:100%;
+		max-width: none;
 		z-index: 9999;
+		justify-content: center;
+		padding: 0 2rem; /* Retain right padding and set up left padding to 0 */
 	}
 
 		#nav ul.divided li {
@@ -3699,6 +3701,7 @@ input, select, textarea {
 			margin-bottom: 0;
 			padding-left: 0;
 			text-transform: uppercase;
+			justify-content: center; /* Center all the links */
 		}
 
 			#nav ul.links li {
@@ -4880,6 +4883,7 @@ input, select, textarea {
 #projects-section {
     background-color: #ffffff; /* Ensure white background here too */
 }
+
 
 
 
