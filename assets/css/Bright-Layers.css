@@ -57,8 +57,8 @@ body {
   text-align: center;
   padding: 100px 20px;
   margin-bottom: 60px;
-  background: linear-gradient(135deg, #007BFF, #00BFFF);
-  color: #fff;
+  background-color: #f0f2f5; /* Changed from gradient to a light gray color */
+  color: #333; /* Changed text color to dark gray for contrast */
   border-radius: 12px;
 }
 
