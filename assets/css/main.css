@@ -99,8 +99,7 @@ input, select, textarea {
 	}
 
 	body {
-		background-color: #000000;
-		color: #ffffff; /* Set default text color to white for readability */
+		background-color: #212931;
 	}
 
 		body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -145,8 +144,7 @@ input, select, textarea {
 		}
 
 	body {
-		color: #000000;
-		color: #ffffff; /* Set default text color to white for readability */
+		color: ##212931;
 		
 	}
 
@@ -4961,6 +4959,7 @@ input, select, textarea {
 }
 
 /* --- End of Project Section Styling --- */
+
 
 
 
