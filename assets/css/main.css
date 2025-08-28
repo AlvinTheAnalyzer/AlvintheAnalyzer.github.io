@@ -4960,6 +4960,70 @@ input, select, textarea {
 
 /* --- End of Project Section Styling --- */
 
+/* Projects Hero Section */
+#projects-hero {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #000000; /* Consistent background */
+    color: #ffffff;
+}
+
+#projects-hero h1 {
+    font-size: 4em;
+}
+
+/* All Projects Grid Section */
+.projects-section {
+    padding: 60px 20px;
+    background-color: #000000;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-item {
+    background-color: #1a1a1a;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(255,255,255,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    color: #ffffff;
+}
+
+.project-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(255,255,255,0.2);
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.project-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.project-item p {
+    font-size: 1em;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+
 
 
 
