@@ -4994,7 +4994,7 @@ input, select, textarea {
 .project-item p {
 	padding: 0 15px;
     color: #555555; /* Dark gray for readability */
-	word-wrap: break-word; /* Add this line to wrap text */
+	overflow-wrap: break-word; /* Use modern standard for text wrapping */
 }
 
 /* Rest of the project card CSS remains the same */
@@ -5010,6 +5010,20 @@ input, select, textarea {
 .sticky-nav {
     background-color: #000000;
     color: #ffffff;
+}
+
+@media screen and (max-width: 980px) {
+    .project-item {
+        width: 45%; /* Two items per row on smaller screens */
+        margin: 10px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .project-item {
+        width: 100%; /* One item per row on mobile */
+        margin: 10px 0;
+    }
 }
 
 
