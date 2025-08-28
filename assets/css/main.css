@@ -5011,97 +5011,152 @@ body#about-body {
     }
 }
 
-/* --- ABOUT PAGE SPECIFIC STYLES (generic.html) --- */
+/* --- About Page Specific Styles (Add to the end of main.css) --- */
 
-/* Ensure the body has a white background */
-body#about-body {
-    background-color: #ffffff !important;
+/* Ensure full page content area with white background */
+#about-body {
+    background-color: #ffffff; /* White background for the entire body */
 }
 
-/* Main content wrapper for about page */
+#wrapper {
+    max-width: none; /* Allow wrapper to take full width */
+    margin: 0; /* Remove default margins */
+    padding: 0; /* Remove default padding */
+}
+
+/* Main content area for about page */
 #about-content {
-    padding-top: 80px; /* Space for the fixed navigation */
+    padding: 0; /* Remove default padding from the main content div */
+    width: 100%; /* Ensure it takes full available width */
+    box-sizing: border-box; /* Include padding/border in element's total width/height */
 }
 
-/* About header section */
-.about-header-section {
-    text-align: center;
-    padding: 4rem 20px;
+/* Styling for header section */
+.about-main-header {
+    background-color: #ffffff; /* White background for the header section */
+    padding: 4em 0; /* Adjust padding as needed for vertical spacing */
+    text-align: center; /* Center align header content by default */
 }
 
-.about-header-section h1 {
-    font-size: 3em;
-    color: #000000;
+.about-main-header .header-content {
+    display: flex; /* Use flexbox for image and text alignment */
+    align-items: center; /* Vertically align items */
+    justify-content: center; /* Horizontally center content */
+    max-width: 90%; /* Constrain content width */
+    margin: 0 auto; /* Center the content container */
+    gap: 3em; /* Space between image and text */
 }
 
-.about-header-section p {
-    color: #555555;
+.about-main-header .profile-picture {
+    width: 250px; /* Good size for the picture */
+    height: 250px; /* Maintain aspect ratio */
+    object-fit: cover; /* Cover the area, cropping if necessary */
+    border-radius: 8px; /* Slightly rounded corners for the picture */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
-.about-header-section .image-container-header img {
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 2rem;
+.about-main-header .header-text h2 {
+    font-size: 3em; /* Make the title bold and prominent */
+    margin-bottom: 0.2em; /* Space between title and subtitle */
+    color: #333; /* Darker color for prominence */
 }
 
-/* Paper-like section styling */
-.paper-like-section {
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 40px;
-    max-width: 1000px;
-    margin: 40px auto;
+.about-main-header .header-text p {
+    font-size: 1.2em;
+    color: #666;
 }
 
-/* Two-column layout */
-.two-column-layout {
-    display: flex;
-    gap: 30px;
-    align-items: flex-start;
+/* Styling for content sections (Background, Path, Data, Q&A, Quotes) */
+.content-section {
+    background-color: #ffffff; /* White background for all content sections */
+    padding: 3em 0; /* Vertical padding for sections */
+    border-top: 1px solid #eee; /* Subtle separator between sections */
 }
 
-.two-column-layout .image-column {
-    flex: 0 0 40%;
+.content-section:first-of-type {
+    border-top: none; /* No border for the first content section */
 }
 
-.two-column-layout .image-column img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+.content-section .section-inner-content {
+    max-width: 80%; /* Control content width for readability */
+    margin: 0 auto; /* Center the content */
+    line-height: 1.7; /* Improve readability of text */
+    color: #444; /* Darker text for readability */
 }
 
-.two-column-layout .text-column {
-    flex: 1;
+.content-section h3 {
+    font-size: 2em;
+    margin-bottom: 1em;
+    color: #333;
+    text-align: center; /* Center align section titles */
 }
 
-/* Layout for image on the left */
-.left-image {
-    flex-direction: row;
+/* Specific adjustments for text flow */
+.content-section p {
+    margin-bottom: 1em; /* Add space between paragraphs */
+    text-align: justify; /* Justify text for a cleaner look */
 }
 
-/* Layout for image on the right */
-.right-image {
-    flex-direction: row-reverse;
+/* Q&A and Quotes Specific Styling */
+#qa-section h4 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    color: #555;
+}
+
+#quotes-section blockquote {
+    font-style: italic;
+    margin: 1.5em 0;
+    padding-left: 1em;
+    border-left: 4px solid #ccc;
+    color: #555;
 }
 
 /* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .two-column-layout {
-        flex-direction: column;
+@media screen and (max-width: 980px) {
+    .about-main-header .header-content {
+        flex-direction: column; /* Stack image and text vertically */
+        text-align: center;
+        gap: 1.5em;
     }
 
-    .two-column-layout .image-column {
-        flex: none;
-        width: 100%;
+    .about-main-header .profile-picture {
+        width: 180px;
+        height: 180px;
     }
 
-    .two-column-layout .image-column img {
-        margin: 0 auto;
+    .about-main-header .header-text h2 {
+        font-size: 2.5em;
+    }
+
+    .content-section .section-inner-content {
+        max-width: 90%; /* Wider content area on smaller screens */
     }
 }
+
+@media screen and (max-width: 736px) {
+    .about-main-header {
+        padding: 3em 0;
+    }
+
+    .about-main-header .profile-picture {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-main-header .header-text h2 {
+        font-size: 2em;
+    }
+
+    .content-section {
+        padding: 2em 0;
+    }
+
+    .content-section h3 {
+        font-size: 1.8em;
+    }
+}
+
 
 
 
