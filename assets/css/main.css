@@ -5015,6 +5015,12 @@ input, select, textarea {
     word-wrap: break-word;
 }
 
+/* Override to fix text wrapping for project descriptions */
+.project-description-text {
+    white-space: normal !important;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
 
 
 
