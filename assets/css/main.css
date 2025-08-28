@@ -4992,10 +4992,10 @@ input, select, textarea {
 }
 
 .project-item p {
-	padding: 0 15px;
-	white-space: normal; /* Force text to wrap normally */
+	white-space: normal !important; /* Force text to wrap normally */
     color: #555555; /* Dark gray for readability */
 	word-wrap: break-word; /* Use modern standard for text wrapping */
+	overflow-wrap: break-word;
 }
 
 /* Rest of the project card CSS remains the same */
@@ -5026,6 +5026,7 @@ input, select, textarea {
         margin: 10px 0;
     }
 }
+
 
 
 
