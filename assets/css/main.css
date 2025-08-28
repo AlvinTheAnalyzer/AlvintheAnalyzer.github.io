@@ -4992,7 +4992,9 @@ input, select, textarea {
 }
 
 .project-item p {
+	padding: 0 15px;
     color: #555555; /* Dark gray for readability */
+	word-wrap: break-word; /* Add this line to wrap text */
 }
 
 /* Rest of the project card CSS remains the same */
@@ -5009,6 +5011,7 @@ input, select, textarea {
     background-color: #000000;
     color: #ffffff;
 }
+
 
 
 
