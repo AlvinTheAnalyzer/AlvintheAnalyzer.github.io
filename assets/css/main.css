@@ -4677,22 +4677,23 @@ input, select, textarea {
 		}
 /* Existing CSS styles */
 
-/* --- Home Page Specific Styles (index.html) --- */
+/* --- Homepage Sections (index.html) --- */
+/* -------------------------------------- */
 
-/* White background for the whole page */
-body {
+/* Reset overall background to white */
+body#index-body {
     background-color: #ffffff;
     color: #000000;
 }
 
-/* Hero section with Alvin's data and photo */
+/* Home hero section (Alvin's data and photo) */
 #hero-split {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
     padding: 6rem 0;
-    background-color: #ffffff; /* White background */
+    background-color: #ffffff;
 }
 
 #hero-split .inner {
@@ -4710,22 +4711,19 @@ body {
     text-align: left;
 }
 
-#hero-split .content h1 {
+#hero-split .content h1, #hero-split .content p {
     color: #000000;
 }
 
-#hero-split .content p {
-    color: #555555;
-}
-
 #hero-split .image-half {
-    flex: 0 0 35%; /* Make photo smaller */
+    flex: 0 0 35%;
     text-align: right;
 }
 
 #hero-split .image-half img {
     max-width: 100%;
     height: auto;
+    border-radius: 8px; /* Added for consistency */
 }
 
 @media screen and (max-width: 980px) {
@@ -4746,7 +4744,7 @@ body {
     }
 }
 
-/* Highlighted Projects Section */
+/* Highlighted projects section */
 #projects-highlight {
     padding: 60px 20px;
     background-color: #ffffff;
@@ -4758,7 +4756,6 @@ body {
     margin-bottom: 2rem;
 }
 
-/* Project Grid */
 #projects-highlight .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -4767,7 +4764,6 @@ body {
     margin: 0 auto;
 }
 
-/* Project Card */
 #projects-highlight .project-item {
     background-color: #f0f0f0;
     padding: 30px;
@@ -4783,45 +4779,51 @@ body {
 }
 
 #projects-highlight .project-item p {
+    color: #555555;
     white-space: normal;
     word-wrap: break-word;
-    color: #555555;
 }
 
-/* --- Projects Page Specific Styles (elements.html) --- */
-body.is-preload {
-    background-color: #ffffff;
+/* --- Projects Page Sections (elements.html) --- */
+/* ----------------------------------------------- */
+
+/* Wrapper and body for projects page to set white background */
+body#elements-body {
+    background-color: #ffffff !important;
     color: #000000;
 }
 
-body.is-preload #projects-page-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+/* Ensure the main projects section fills the viewport */
+#projects-page-content {
     min-height: 100vh;
-    padding: 60px 20px;
+    padding-top: 60px; /* Space for the navigation bar */
+    padding-bottom: 60px;
+    background-color: #ffffff;
 }
 
-body.is-preload #projects-page-content header {
+#projects-page-content .inner {
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+}
+
+/* Centered title for projects page */
+#projects-page-content h1 {
+    color: #000000;
+    font-size: 3em;
     margin-bottom: 2rem;
 }
 
-body.is-preload #projects-page-content h1 {
-    color: #000000;
-    font-size: 3em;
-}
-
-body.is-preload .projects-grid {
+/* Grid styling for all project items on the projects page */
+#projects-page-content .projects-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    max-width: 1200px;
     margin: 0 auto;
 }
 
-body.is-preload .project-item {
+/* Styling for project cards on the projects page */
+#projects-page-content .project-item {
     background-color: #f0f0f0;
     padding: 30px;
     border-radius: 12px;
@@ -4832,30 +4834,31 @@ body.is-preload .project-item {
     text-decoration: none;
 }
 
-body.is-preload .project-item:hover {
+#projects-page-content .project-item:hover {
     transform: translateY(-10px);
     box-shadow: 0 12px 25px rgba(0,0,0,0.2);
 }
 
-body.is-preload .project-item a {
+#projects-page-content .project-item a {
     text-decoration: none;
     color: inherit;
 }
 
-body.is-preload .project-item img {
+#projects-page-content .project-item img {
     width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 20px;
 }
 
-body.is-preload .project-item h2 {
+#projects-page-content .project-item h2 {
     color: #000000;
     font-size: 1.5em;
     margin-bottom: 10px;
 }
 
-body.is-preload .project-item p {
+/* Ensure project descriptions wrap correctly on projects page */
+#projects-page-content .project-item p {
     color: #555555;
     white-space: normal !important;
     word-wrap: break-word !important;
@@ -4863,13 +4866,55 @@ body.is-preload .project-item p {
 }
 
 /* --- Navigation Fixes for All Pages --- */
-#wrapper {
-    background: #ffffff;
+/* -------------------------------------- */
+#nav {
+    display: none !important;
 }
 
-#nav {
-    display: none; /* Hide old nav if still present */
+.sticky-nav {
+    display: flex !important;
+    justify-content: center !important;
+    position: fixed !important; /* Fixed position to stay on top */
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    background-color: #000000;
+    color: #fff;
+    z-index: 10000;
+    padding: 15px 40px;
 }
+
+.sticky-nav ul.links {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.sticky-nav ul.links li {
+    list-style: none;
+    margin: 0 15px;
+}
+
+.sticky-nav ul.links li a {
+    text-decoration: none;
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sticky-nav ul.links li.active a {
+    background-color: #00BFFF;
+    color: #000;
+}
+
+@media screen and (max-width: 768px) {
+    .sticky-nav {
+        padding: 10px 20px;
+    }
+}
+
 
 
 
