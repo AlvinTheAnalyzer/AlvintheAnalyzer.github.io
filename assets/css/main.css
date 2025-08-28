@@ -4716,7 +4716,7 @@ body#index-body {
 }
 
 #hero-split .image-half {
-    flex: 0 0 35%;
+    flex: 0 0 30%;
     text-align: right;
 }
 
@@ -4914,6 +4914,7 @@ body#elements-body {
         padding: 10px 20px;
     }
 }
+
 
 
 
