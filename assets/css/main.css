@@ -4900,6 +4900,107 @@ body.is-preload {
     padding-top: 2rem; /* Add space between nav and title */
 }
 
+/* --- ABOUT PAGE SPECIFIC STYLES (generic.html) --- */
+/* ------------------------------------------------ */
+
+/* Ensure the body has a white background */
+body#about-body {
+    background-color: #ffffff !important;
+}
+
+/* Main content wrapper for about page */
+#about-content {
+    padding-top: 80px; /* Space for the fixed navigation */
+}
+
+/* About header section */
+.about-header-section {
+    text-align: center;
+    padding: 4rem 20px;
+}
+
+.about-header-section h1 {
+    font-size: 3em;
+    color: #000000;
+}
+
+.about-header-section p {
+    color: #555555;
+}
+
+.about-header-section .image-container-header img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 2rem;
+}
+
+/* Paper-like section styling */
+.paper-like-section {
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    padding: 40px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.paper-like-section h3 {
+    color: #000000;
+}
+
+.paper-like-section p {
+    color: #555555;
+    white-space: normal !important;
+}
+
+/* Two-column layout */
+.two-column-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.two-column-layout .image-column {
+    flex: 0 0 40%; /* Adjust image column width */
+}
+
+.two-column-layout .image-column img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.two-column-layout .text-column {
+    flex: 1;
+}
+
+/* Layout for image on the left */
+.left-image {
+    flex-direction: row;
+}
+
+/* Layout for image on the right */
+.right-image {
+    flex-direction: row-reverse;
+}
+
+/* Responsive adjustments for smaller screens */
+@media screen and (max-width: 768px) {
+    .two-column-layout {
+        flex-direction: column;
+    }
+
+    .two-column-layout .image-column {
+        flex: none;
+        width: 100%;
+    }
+
+    .two-column-layout .image-column img {
+        margin: 0 auto;
+    }
+}
 
 
 
