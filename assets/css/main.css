@@ -5011,6 +5011,13 @@ input, select, textarea {
     color: #ffffff;
 }
 
+/* Fix text wrapping inside project description */
+#projects-section .projects-grid .project-item a p {
+    white-space: normal;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
 
 
 
