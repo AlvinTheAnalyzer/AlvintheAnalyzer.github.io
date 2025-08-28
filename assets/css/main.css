@@ -4884,6 +4884,82 @@ input, select, textarea {
     background-color: #ffffff; /* Ensure white background here too */
 }
 
+/* --- Projects Section - Highlighted Projects --- */
+
+/* Use a new section ID to avoid conflicts with existing styles */
+#projects-highlight {
+    background-color: #ffffff; /* Use a clean white background for the section */
+    padding: 60px 20px; /* Add padding for vertical whitespace */
+    text-align: center; /* Center the heading */
+}
+
+#projects-highlight h2 {
+    font-size: 2.5em;
+    margin-bottom: 40px; /* Ample space below the heading */
+}
+
+/* Updated grid layout for consistency and responsiveness */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between grid items */
+    max-width: 1200px; /* Control max width of the grid */
+    margin: 0 auto; /* Center the grid */
+}
+
+/* Project Card Styling with Hover Effects */
+.project-card {
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+    text-align: left; /* Align text to the left within the card */
+}
+
+.project-card:hover {
+    transform: translateY(-10px); /* Lift the card slightly on hover */
+    box-shadow: 0 12px 25px rgba(0,0,0,0.2); /* Enhance the shadow on hover */
+}
+
+.project-card img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px; /* Space below the image */
+}
+
+.project-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.project-card p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Button Styling for Project Cards */
+.project-card .button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #00BFFF; /* Vibrant accent color */
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.project-card .button:hover {
+    background-color: #00A3D9; /* Darken accent color on hover */
+}
+
+/* --- End of Project Section Styling --- */
+
+
 
 
 
