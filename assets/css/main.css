@@ -4900,105 +4900,114 @@ body.is-preload {
     padding-top: 2rem; /* Add space between nav and title */
 }
 
-/* --- ABOUT PAGE SPECIFIC STYLES (generic.html) --- */
-/* ------------------------------------------------ */
+* --- About Page Specific Styles (Append to main.css) --- */
 
-/* Ensure the body has a white background */
 body#about-body {
-    background-color: #ffffff !important;
+    background-color: #FFFFFF; /* Ensure full page white background for about page */
 }
 
-/* Main content wrapper for about page */
-#about-content {
-    padding-top: 80px; /* Space for the fixed navigation */
+.about-page-main {
+    max-width: 1200px; /* Adjust as needed to align with your overall site layout */
+    margin: 20px auto; /* Center content with some top margin */
+    padding: 0 20px; /* Add horizontal padding to prevent content from touching edges */
+    box-sizing: border-box;
 }
 
-/* About header section */
-.about-header-section {
-    text-align: center;
-    padding: 4rem 20px;
-}
-
-.about-header-section h1 {
-    font-size: 3em;
-    color: #000000;
-}
-
-.about-header-section p {
-    color: #555555;
-}
-
-.about-header-section .image-container-header img {
-    max-width: 500px;
-    height: auto;
-    border-radius: 8px;
-    margin-top: 2rem;
-}
-
-/* Paper-like section styling */
-.paper-like-section {
-    background-color: #f9f9f9;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    border-radius: 8px;
-    padding: 40px;
-    max-width: 1000px;
-    margin: 40px auto;
-}
-
-.paper-like-section h3 {
-    color: #000000;
-}
-
-.paper-like-section p {
-    color: #555555;
-    white-space: normal !important;
-}
-
-/* Two-column layout */
-.two-column-layout {
+.about-content-wrapper {
     display: flex;
-    gap: 30px;
-    align-items: flex-start;
+    flex-wrap: wrap; /* Allows columns to stack on smaller screens */
+    gap: 40px; /* Space between the image column and text column */
+    align-items: flex-start; /* Aligns content to the top of the columns */
 }
 
-.two-column-layout .image-column {
-    flex: 0 0 40%; /* Adjust image column width */
+.about-left-column {
+    flex: 1; /* Allows the column to grow */
+    min-width: 300px; /* Minimum width for the image column before stacking */
+    max-width: 45%; /* Control maximum width for larger screens */
 }
 
-.two-column-layout .image-column img {
-    max-width: 100%;
+.main-about-photo {
+    width: 100%;
     height: auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: block; /* Remove extra space below the image */
+    border-radius: 8px; /* Optional: adds rounded corners to the image */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Subtle shadow for the image */
 }
 
-.two-column-layout .text-column {
-    flex: 1;
+.about-right-column {
+    flex: 2; /* Allows this column to take more space */
+    min-width: 450px; /* Minimum width for the text column before stacking */
+    max-width: 100%; /* Ensure it doesn't exceed its flex container */
 }
 
-/* Layout for image on the left */
-.left-image {
-    flex-direction: row;
+.about-heading {
+    font-size: 3em; /* Adjust as per your design system */
+    font-weight: bold;
+    margin-top: 0; /* Remove default top margin from h1 */
+    margin-bottom: 10px;
 }
 
-/* Layout for image on the right */
-.right-image {
-    flex-direction: row-reverse;
+.about-greeting {
+    font-size: 1.2em;
+    color: #666; /* Softer color for the greeting */
+    margin-top: 0;
+    margin-bottom: 20px;
 }
 
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 768px) {
-    .two-column-layout {
-        flex-direction: column;
+.about-section-spacing {
+    height: 30px; /* Adjust for desired whitespace between greeting and first section */
+}
+
+.about-info-section {
+    margin-bottom: 30px; /* Space between sections like Background, My Path, Data */
+}
+
+.about-info-section h2 {
+    font-size: 2em; /* Adjust heading size for sections */
+    margin-top: 25px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.about-info-section p {
+    margin-bottom: 1em; /* Spacing between paragraphs within sections */
+    line-height: 1.6; /* Improve readability */
+}
+
+/* Responsive Adjustments for About Page */
+@media (max-width: 980px) { /* Adjust breakpoint as needed based on your main.css */
+    .about-content-wrapper {
+        flex-direction: column; /* Stack columns vertically on smaller screens */
+        gap: 20px; /* Reduce gap when stacked */
     }
 
-    .two-column-layout .image-column {
-        flex: none;
-        width: 100%;
+    .about-left-column,
+    .about-right-column {
+        min-width: unset; /* Remove min-width constraints */
+        max-width: 100%; /* Allow them to take full width */
     }
 
-    .two-column-layout .image-column img {
-        margin: 0 auto;
+    .main-about-photo {
+        max-width: 80%; /* Limit image width on smaller screens if desired */
+        margin: 0 auto; /* Center the image when stacked */
+    }
+}
+
+@media (max-width: 736px) { /* Further adjustments for very small screens */
+    .about-page-main {
+        padding: 0 15px; /* Adjust padding for smaller screens */
+    }
+
+    .about-heading {
+        font-size: 2.5em; /* Smaller heading for mobile */
+    }
+
+    .about-greeting {
+        font-size: 1em;
+    }
+
+    .about-info-section h2 {
+        font-size: 1.8em;
     }
 }
 
