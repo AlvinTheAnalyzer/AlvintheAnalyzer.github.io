@@ -3619,13 +3619,13 @@ input, select, textarea {
 		background: #000000;
 		height: 4rem;
 		line-height: 4rem;
-		margin: -4rem auto 0 auto;
+		margin: 0;
 		overflow: hidden;
 		padding: 0 2rem 0 0;
 		position: relative;
 		width: calc(100% - 4rem);
 		max-width: 72rem;
-		z-index: 2;
+		z-index: 9999;
 	}
 
 		#nav ul.divided li {
@@ -4880,6 +4880,7 @@ input, select, textarea {
 #projects-section {
     background-color: #ffffff; /* Ensure white background here too */
 }
+
 
 
 
