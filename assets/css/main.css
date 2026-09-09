@@ -5398,11 +5398,16 @@ body#about-body {
 }
 
 #about-content {
-    padding: 0;
+    padding: 0 4vw 0 12vw;
     width: 100%;
     box-sizing: border-box;
-    max-width: 720px;
-    margin: 0 auto;
+    max-width: 1500px;
+}
+
+@media screen and (max-width: 900px) {
+    #about-content {
+        padding: 0 6vw;
+    }
 }
 
 .about-section {
@@ -5467,6 +5472,7 @@ body#about-body {
 .degree-title {
     font-family: 'Bricolage Grotesque', sans-serif;
     font-weight: 600;
+    font-style: italic;
     font-size: 1.6rem;
     line-height: 1.3;
     color: #C5FF6B;
