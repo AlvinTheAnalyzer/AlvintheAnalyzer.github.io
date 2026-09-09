@@ -26,22 +26,17 @@
             </ul>
         </nav>
 
-        <!-- Progress dots -->
-        <div class="about-progress" id="about-progress">
-            <span class="progress-dot active" data-target="about-intro"></span>
-            <span class="progress-dot" data-target="about-path"></span>
-            <span class="progress-dot" data-target="about-adventure"></span>
-        </div>
-
         <!-- Main Content for About Page -->
         <div id="about-content">
 
-            <!-- Intro: photo flows inline with text -->
+            <!-- Intro: degree highlighted, photo flows inline with text -->
             <section id="about-intro" class="about-section">
                 <p class="section-eyebrow reveal">about</p>
+                <p class="degree-title reveal">Bachelor of Science in Business Administration (BSBA)<br />Information Technology &amp; Analytics</p>
+                <p class="degree-subtitle reveal">Bloomsburg University of Pennsylvania</p>
                 <div class="about-intro-flow reveal">
                     <img src="images/IMG_0656.jpg" alt="Alvin" class="about-photo" />
-                    <p class="about-intro-text">Thanks for visiting! I'm a proud Philadelphian, born and raised, with a <span class="accent">BSBA in Information Technology &amp; Analytics</span> from Bloomsburg University of Pennsylvania. My curiosity runs toward true crime and the complexities of human behavior, toward books that fuel my imagination, and toward new hiking trails whenever I can find them. As an avid Eagles fan, I carry that same unyielding enthusiasm into my work — professional, but never without a little fun.</p>
+                    <p class="about-intro-text">Thanks for visiting! I'm a proud Philadelphian, born and raised in a city that shaped my love of exploration and storytelling. My interests run toward true crime and the complexities of human behavior, toward books that fuel my imagination, and toward hiking new trails or planning the next travel adventure whenever I get the chance. As an avid Eagles fan, I bring that same unyielding enthusiasm to my work — professional, but always with a little fun mixed in.</p>
                 </div>
             </section>
 
@@ -56,7 +51,7 @@
                         <div class="timeline-content">
                             <p class="timeline-age">age 7</p>
                             <p class="timeline-title">A device that felt like magic</p>
-                            <p class="timeline-desc">My stepfather worked for Verizon, selling cutting-edge telecom devices — imagine FaceTime, but on something that looked like a sleek early laptop. I had to know how it worked.</p>
+                            <p class="timeline-desc">My stepfather worked for Verizon, selling cutting-edge telecom devices — imagine FaceTime, but on something that looked like a sleek early laptop. I was determined to unravel the mystery behind how it worked, and the more I interacted with it, the deeper my curiosity grew.</p>
                         </div>
                         <div class="timeline-dot is-glow"></div>
                         <div class="timeline-spacer"></div>
@@ -68,7 +63,7 @@
                         <div class="timeline-content">
                             <p class="timeline-age">age 8</p>
                             <p class="timeline-title">My first world wide web</p>
-                            <p class="timeline-desc">A Dell Optiplex arrived, and browsing the internet for the first time felt like the whole world was suddenly a click away — Poptropica, Club Penguin, IMVU, Wizard101, all of it.</p>
+                            <p class="timeline-desc">A Dell Optiplex arrived, and the moment I sat down in front of that screen, my world changed. Browsing the web for the first time felt like the whole world was suddenly a click away — Poptropica, Club Penguin, IMVU, Wizard101, all of it. I was hooked, not just on the games, but on the possibilities.</p>
                         </div>
                     </div>
 
@@ -76,7 +71,7 @@
                         <div class="timeline-content">
                             <p class="timeline-age">age 13</p>
                             <p class="timeline-title">Taught myself to code</p>
-                            <p class="timeline-desc">A "Code for Dummies" book became my introduction to Python, CSS, and JavaScript, taught entirely on my own.</p>
+                            <p class="timeline-desc">A "Code for Dummies" book became my introduction to Python, CSS, and JavaScript, taught entirely on my own — even while my heart was still set on becoming a lawyer.</p>
                         </div>
                         <div class="timeline-dot"></div>
                         <div class="timeline-spacer"></div>
@@ -88,7 +83,7 @@
                         <div class="timeline-content">
                             <p class="timeline-age">age 15</p>
                             <p class="timeline-title">Chose law, for now</p>
-                            <p class="timeline-desc">Coding got set aside to focus on a different dream — becoming a lawyer. The pull of technology never fully let go, though.</p>
+                            <p class="timeline-desc">Coding got set aside to focus on that dream. But the pull of technology never fully let go — it just waited for the right moment to come rushing back.</p>
                         </div>
                     </div>
 
@@ -96,7 +91,7 @@
                         <div class="timeline-content">
                             <p class="timeline-age">freshman year</p>
                             <p class="timeline-title">Changed my major that night</p>
-                            <p class="timeline-desc">A professor's presentation on IT &amp; Analytics brought it all rushing back. I changed my major that same night — less a decision, more a homecoming.</p>
+                            <p class="timeline-desc">A professor's presentation on IT &amp; Analytics brought it all rushing back. That very night, I changed my major and never looked back — less a decision, more a homecoming to where I'd always belonged.</p>
                         </div>
                         <div class="timeline-dot"></div>
                         <div class="timeline-spacer"></div>
@@ -122,6 +117,25 @@
                 </div>
 
                 <p class="adventure-close reveal">My focus stays the same: create data-driven solutions that don't just solve problems, but leave something that actually matters.</p>
+            </section>
+
+            <!-- Certifications -->
+            <section id="about-certifications" class="about-section">
+                <p class="section-eyebrow reveal">certifications</p>
+                <div class="cert-list">
+                    <div class="cert-item reveal">
+                        <p class="cert-name">Certification name</p>
+                        <p class="cert-issuer">Issuing organization &middot; Year</p>
+                    </div>
+                    <div class="cert-item reveal">
+                        <p class="cert-name">Certification name</p>
+                        <p class="cert-issuer">Issuing organization &middot; Year</p>
+                    </div>
+                    <div class="cert-item reveal">
+                        <p class="cert-name">Certification name</p>
+                        <p class="cert-issuer">Issuing organization &middot; Year</p>
+                    </div>
+                </div>
             </section>
 
         </div>
@@ -186,37 +200,6 @@
                     el.classList.add('is-visible');
                 });
             }
-        })();
-    </script>
-
-    <script>
-        (function () {
-            var sections = document.querySelectorAll('.about-section');
-            var dots = document.querySelectorAll('.progress-dot');
-            if (!sections.length || !dots.length) return;
-
-            if ('IntersectionObserver' in window) {
-                var observer = new IntersectionObserver(function (entries) {
-                    entries.forEach(function (entry) {
-                        if (entry.isIntersecting) {
-                            dots.forEach(function (dot) {
-                                dot.classList.toggle('active', dot.getAttribute('data-target') === entry.target.id);
-                            });
-                        }
-                    });
-                }, { threshold: 0.5 });
-
-                sections.forEach(function (section) {
-                    observer.observe(section);
-                });
-            }
-
-            dots.forEach(function (dot) {
-                dot.addEventListener('click', function () {
-                    var target = document.getElementById(dot.getAttribute('data-target'));
-                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                });
-            });
         })();
     </script>
 
