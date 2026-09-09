@@ -4,6 +4,9 @@
     <title>Welome to Data with Alvin</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -22,12 +25,13 @@
             </ul>
         </nav>
 
-        <!-- Full-Page Hero with a Split (Welcoming Section) -->
+        <!-- Full-Page Hero (dark, scroll-story opener) -->
         <section id="hero-split">
             <div class="inner">
                 <div class="content">
-                    <h1>Welome to Data with Alvin</h1>
-                    <p>Driven by Curiosity. Powered by Data.</p>
+                    <p class="hero-eyebrow">Driven by curiosity. Powered by data.</p>
+                    <h1 class="hero-headline">Curious by nature.<br />Always <span class="accent">building</span> something.</h1>
+                    <p class="hero-stats">I've shipped <span class="stat-inline" data-count-to="14">0</span> projects and spent <span class="stat-inline" data-count-to="300">0</span>+ hours chasing curiosity across data, writing, and whatever else catches my attention. This is where I keep track of it.</p>
                     <ul class="actions">
                         <li><a href="generic.html" class="button primary">My Story</a></li>
                     </ul>
@@ -35,6 +39,10 @@
                 <div class="image-half">
                     <img src="images/me_in_college.JPG" alt="Alvin Hartridge" />
                 </div>
+            </div>
+            <div class="hero-current">
+                <p class="hero-current-label">currently poking at</p>
+                <p class="hero-current-text">A logistics dashboard rebuild, a new true-crime reading list, and this site.</p>
             </div>
         </section>
 
@@ -88,10 +96,51 @@
     <script src="assets/js/breakpoints.min.js"></script>
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
+    <script>
+        (function () {
+            var statEls = document.querySelectorAll('.stat-inline[data-count-to]');
+            if (!statEls.length) return;
+
+            function animateCount(el) {
+                var target = parseInt(el.getAttribute('data-count-to'), 10) || 0;
+                var duration = 1200;
+                var start = null;
+
+                function step(timestamp) {
+                    if (!start) start = timestamp;
+                    var progress = Math.min((timestamp - start) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.round(eased * target);
+                    if (progress < 1) {
+                        window.requestAnimationFrame(step);
+                    } else {
+                        el.textContent = target;
+                    }
+                }
+                window.requestAnimationFrame(step);
+            }
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            animateCount(entry.target);
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.6 });
+
+                statEls.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                statEls.forEach(animateCount);
+            }
+        })();
+    </script>
 
 </body>
 </html>
-
 
 
 
