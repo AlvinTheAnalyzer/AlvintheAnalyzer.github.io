@@ -4881,9 +4881,10 @@ body {
 }
 
 .hero-eyebrow {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.85rem;
-    letter-spacing: 0.05em;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 1.4rem;
+    letter-spacing: 0.02em;
     color: #C5FF6B;
     margin: 0 0 0.75rem;
 }
@@ -4963,9 +4964,10 @@ body {
 }
 
 .hero-current-label {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 1.2rem;
+    letter-spacing: 0.02em;
     color: #7C9490;
     margin: 0 0 0.5rem;
 }
@@ -5074,9 +5076,10 @@ body {
 }
 
 .gallery-eyebrow {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
     color: #7C9490;
     margin: 0 0 0.5rem;
 }
@@ -5407,11 +5410,57 @@ body#about-body {
 }
 
 .section-eyebrow {
-    font-family: 'Nunito Sans', sans-serif;
-    font-size: 0.75rem;
-    letter-spacing: 0.05em;
+    font-family: 'Caveat', cursive;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.02em;
     color: #7C9490;
     margin: 0 0 1.5rem;
+}
+
+/* Big handwritten welcome headline */
+.handwritten-headline {
+    font-family: 'Caveat', cursive;
+    font-weight: 700;
+    font-size: 3.5rem;
+    line-height: 1.1;
+    color: #E8F2EE;
+    margin: 0 0 0.5rem;
+}
+
+/* Intro layout - text left, enlarged photo pinned top-right */
+.intro-grid {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+}
+
+.intro-main {
+    flex: 1;
+    min-width: 0;
+}
+
+.intro-photo-frame {
+    flex-shrink: 0;
+    width: 300px;
+}
+
+.about-photo-large {
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(197, 255, 107, 0.25);
+}
+
+@media screen and (max-width: 900px) {
+    .intro-grid {
+        flex-direction: column;
+    }
+
+    .intro-photo-frame {
+        width: 220px;
+        order: -1;
+    }
 }
 
 /* Degree - prominent title before intro */
@@ -5429,19 +5478,6 @@ body#about-body {
     font-size: 0.95rem;
     color: #9CAEA8;
     margin: 0 0 2rem;
-}
-
-/* Intro - photo flows inline with text */
-.about-intro-flow {
-    overflow: hidden;
-}
-
-.about-photo {
-    float: right;
-    width: 150px;
-    border-radius: 14px;
-    margin: 4px 0 16px 24px;
-    border: 1px solid rgba(197, 255, 107, 0.25);
 }
 
 .about-intro-text {
@@ -5640,6 +5676,10 @@ body#about-body {
         padding: 3.5rem 1.25rem;
     }
 
+    .handwritten-headline {
+        font-size: 2.5rem;
+    }
+
     .degree-title {
         font-size: 1.25rem;
     }
@@ -5648,8 +5688,8 @@ body#about-body {
         font-size: 1.2rem;
     }
 
-    .about-photo {
-        width: 110px;
+    .intro-photo-frame {
+        width: 160px;
     }
 
     .timeline-item {
