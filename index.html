@@ -46,28 +46,49 @@
             </div>
         </section>
 
-        <!-- Projects Section - Highlighted Projects -->
+        <!-- Projects Section - Living Gallery -->
         <section id="projects-highlight">
             <div class="container">
-                <h2>Featured Projects</h2>
-                <div class="projects-grid">
-                    <!-- Project Card 1 -->
-                    <div class="project-item">
-                        <a href="pizza-sales-report.html">
-                            <img src="images/pizza_sales.jpg" alt="Pizza Sales Report" />
-                            <h2>Pizza Sales Report</h2>
-                            <p class="project-description-text">A data-driven analysis of pizza sales performance, highlighting key metrics such as revenue, order trends, product mix, and customer purchasing behavior. The report uncovers peak sales periods, top-selling categories, and insights that help improve menu strategy and business operations.</p>
-                        </a>
-                    </div>
-                    <!-- Project Card 2 -->
-                    <div class="project-item">
-                        <a href="electric-vehicle-population-report.html">
-                            <img src="images/kenny-leys-7qLym89s69c-unsplash.jpg" alt="Electric Cars Population Report" />
-                            <h2>Electric Cars Population Report</h2>
-                            <p class="project-description-text">An analytical overview of electric vehicle adoption across regions, brands, and fuel types. This project explores BEV vs. PHEV distribution, CAFV-eligible vehicles, and market trends to better understand EV growth, consumer demand, and emerging sustainability patterns.</p>
-                        </a>
-                    </div>
-                    <!-- Add more project cards as needed -->
+                <p class="gallery-eyebrow">what i'm creating</p>
+                <h2 class="gallery-heading">A living gallery</h2>
+
+                <div class="gallery-tabs" role="tablist">
+                    <button type="button" class="gallery-tab active" data-category="data">Data</button>
+                    <button type="button" class="gallery-tab" data-category="writing">Writing</button>
+                    <button type="button" class="gallery-tab" data-category="hobbies">Hobbies</button>
+                </div>
+
+                <!-- Data category -->
+                <div class="gallery-grid" data-panel="data">
+                    <a href="pizza-sales-report.html" class="gallery-tile is-featured">
+                        <span class="tile-dot"></span>
+                        <p class="tile-label">featured</p>
+                        <h3 class="tile-title">Pizza Sales Report</h3>
+                        <p class="tile-desc">Revenue, order trends, product mix</p>
+                    </a>
+                    <a href="electric-vehicle-population-report.html" class="gallery-tile tile-tall">
+                        <h3 class="tile-title">Electric Cars Population Report</h3>
+                        <p class="tile-desc">BEV vs PHEV adoption trends</p>
+                    </a>
+                    <a href="terra-logistics.html" class="gallery-tile tile-half">
+                        <h3 class="tile-title">TERRA Logistics Report</h3>
+                        <p class="tile-desc">Warehouse &amp; shipment analysis</p>
+                    </a>
+                    <a href="instagram-case-study.html" class="gallery-tile tile-half">
+                        <h3 class="tile-title">Instagram Case Study</h3>
+                        <p class="tile-desc">Engagement &amp; growth analysis</p>
+                    </a>
+                    <div class="gallery-tile tile-add">+ new thing you're making</div>
+                </div>
+
+                <!-- Writing category (placeholder until populated) -->
+                <div class="gallery-grid" data-panel="writing" hidden>
+                    <div class="gallery-tile tile-add tile-add-wide">+ new thing you're making</div>
+                </div>
+
+                <!-- Hobbies category (placeholder until populated) -->
+                <div class="gallery-grid" data-panel="hobbies" hidden>
+                    <div class="gallery-tile tile-add tile-add-wide">+ new thing you're making</div>
                 </div>
             </div>
         </section>
@@ -138,10 +159,30 @@
             }
         })();
     </script>
+    <script>
+        (function () {
+            var tabs = document.querySelectorAll('.gallery-tab');
+            var panels = document.querySelectorAll('.gallery-grid[data-panel]');
+            if (!tabs.length || !panels.length) return;
+
+            tabs.forEach(function (tab) {
+                tab.addEventListener('click', function () {
+                    var category = tab.getAttribute('data-category');
+
+                    tabs.forEach(function (t) {
+                        t.classList.toggle('active', t === tab);
+                    });
+
+                    panels.forEach(function (panel) {
+                        panel.hidden = panel.getAttribute('data-panel') !== category;
+                    });
+                });
+            });
+        })();
+    </script>
 
 </body>
 </html>
-
 
 
 
