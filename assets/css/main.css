@@ -5503,6 +5503,8 @@ body#about-body {
 .path-timeline {
     position: relative;
     padding: 1rem 0;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .timeline-line {
@@ -5583,14 +5585,16 @@ body#about-body {
     font-weight: 500;
     font-size: 1.15rem;
     color: #E8F2EE;
-    margin: 0 0 1.75rem;
+    margin: 0 auto 1.75rem;
+    max-width: 960px;
 }
 
 .theme-chips {
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-    margin-bottom: 1.75rem;
+    margin: 0 auto 1.75rem;
+    max-width: 960px;
 }
 
 .theme-chip {
@@ -5619,7 +5623,8 @@ body#about-body {
 .theme-reveal {
     border-left: 2px solid #C5FF6B;
     padding-left: 20px;
-    max-width: 480px;
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .theme-reveal-label {
@@ -5635,6 +5640,7 @@ body#about-body {
     line-height: 1.7;
     color: #E8F2EE;
     margin: 0;
+    max-width: 560px;
 }
 
 .adventure-close {
@@ -5642,8 +5648,8 @@ body#about-body {
     font-weight: 500;
     font-size: 1.05rem;
     color: #9CAEA8;
-    margin: 3rem 0 0;
-    max-width: 480px;
+    margin: 3rem auto 0;
+    max-width: 960px;
 }
 
 /* Certifications */
