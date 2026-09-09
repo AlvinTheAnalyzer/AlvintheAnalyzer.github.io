@@ -5036,6 +5036,10 @@ body {
     gap: 14px;
 }
 
+.gallery-grid[hidden] {
+    display: none;
+}
+
 .gallery-tile {
     display: flex;
     flex-direction: column;
@@ -5427,6 +5431,25 @@ body#about-body {
         font-size: 1.8em;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
