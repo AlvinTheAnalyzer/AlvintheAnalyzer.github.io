@@ -4,6 +4,9 @@
     <title>About</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@400;500;600&family=Nunito+Sans:wght@400;600&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="assets/css/main.css" />
     <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 </head>
@@ -14,6 +17,7 @@
 
         <!-- Sticky Navigation -->
         <nav class="sticky-nav">
+            <a href="index.html" class="nav-logo">Alvin</a>
             <ul class="links">
                 <li><a href="index.html">Home</a></li>
                 <li class="active"><a href="generic.html">About</a></li>
@@ -22,53 +26,108 @@
             </ul>
         </nav>
 
+        <!-- Progress dots -->
+        <div class="about-progress" id="about-progress">
+            <span class="progress-dot active" data-target="about-intro"></span>
+            <span class="progress-dot" data-target="about-path"></span>
+            <span class="progress-dot" data-target="about-adventure"></span>
+        </div>
+
         <!-- Main Content for About Page -->
         <div id="about-content">
-            
-            <!-- Header Section -->
-            <section class="about-main-header">
-                <div class="header-content">
-                    <img src="images/IMG_0656.jpg" alt="Alvin" class="profile-picture" />
-                    <div class="header-text">
-                        <h2><b>About Me</b></h2>
-                        <p>Thanks for visiting!</p>
+
+            <!-- Intro: photo flows inline with text -->
+            <section id="about-intro" class="about-section">
+                <p class="section-eyebrow reveal">about</p>
+                <div class="about-intro-flow reveal">
+                    <img src="images/IMG_0656.jpg" alt="Alvin" class="about-photo" />
+                    <p class="about-intro-text">Thanks for visiting! I'm a proud Philadelphian, born and raised, with a <span class="accent">BSBA in Information Technology &amp; Analytics</span> from Bloomsburg University of Pennsylvania. My curiosity runs toward true crime and the complexities of human behavior, toward books that fuel my imagination, and toward new hiking trails whenever I can find them. As an avid Eagles fan, I carry that same unyielding enthusiasm into my work — professional, but never without a little fun.</p>
+                </div>
+            </section>
+
+            <!-- My Path - modern alternating timeline -->
+            <section id="about-path" class="about-section">
+                <p class="section-eyebrow reveal">the path here</p>
+
+                <div class="path-timeline">
+                    <div class="timeline-line"></div>
+
+                    <div class="timeline-item is-left reveal">
+                        <div class="timeline-content">
+                            <p class="timeline-age">age 7</p>
+                            <p class="timeline-title">A device that felt like magic</p>
+                            <p class="timeline-desc">My stepfather worked for Verizon, selling cutting-edge telecom devices — imagine FaceTime, but on something that looked like a sleek early laptop. I had to know how it worked.</p>
+                        </div>
+                        <div class="timeline-dot is-glow"></div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item is-right reveal">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-age">age 8</p>
+                            <p class="timeline-title">My first world wide web</p>
+                            <p class="timeline-desc">A Dell Optiplex arrived, and browsing the internet for the first time felt like the whole world was suddenly a click away — Poptropica, Club Penguin, IMVU, Wizard101, all of it.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item is-left reveal">
+                        <div class="timeline-content">
+                            <p class="timeline-age">age 13</p>
+                            <p class="timeline-title">Taught myself to code</p>
+                            <p class="timeline-desc">A "Code for Dummies" book became my introduction to Python, CSS, and JavaScript, taught entirely on my own.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-spacer"></div>
+                    </div>
+
+                    <div class="timeline-item is-right reveal">
+                        <div class="timeline-spacer"></div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-content">
+                            <p class="timeline-age">age 15</p>
+                            <p class="timeline-title">Chose law, for now</p>
+                            <p class="timeline-desc">Coding got set aside to focus on a different dream — becoming a lawyer. The pull of technology never fully let go, though.</p>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item is-left reveal">
+                        <div class="timeline-content">
+                            <p class="timeline-age">freshman year</p>
+                            <p class="timeline-title">Changed my major that night</p>
+                            <p class="timeline-desc">A professor's presentation on IT &amp; Analytics brought it all rushing back. I changed my major that same night — less a decision, more a homecoming.</p>
+                        </div>
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-spacer"></div>
                     </div>
                 </div>
             </section>
 
-            <!-- Background Information Section -->
-            <section id="background-info-section" class="content-section">
-                <div class="section-inner-content">
-                    <h3>Background Information</h3>
-                    <p><b><i>Bachelor of Science in Business Administration (BSBA): Information Technology & Analytics</i></b></p>
-                    <p><b><i>Bloomsburg University of Pennsylvania</i></b></p>
-                    <p>Welcome! I’m a proud Philadelphian, born and raised in the vibrant city that has shaped my passion for exploration and storytelling. My interests span the intriguing realms of true crime, where I love delving into the complexities of human behavior, to the joys of reading, which fuels my imagination and inspires my analytical mindset.<br />
-                    When I’m not immersed in a captivating book or unraveling the latest crime documentary, you can find me hiking through nature's beauty, embracing new trails, or planning my next travel adventure. As an avid Eagles fan, I carry the spirit of my city’s sports culture with me, cheering for the team with unyielding enthusiasm.<br />
-                    I believe in blending professionalism with a touch of fun, and I strive to bring that balance to all my projects. I’m excited to share my work with you and look forward to connecting!</p>
+            <!-- Data, Decisions, and Detours - themed chips -->
+            <section id="about-adventure" class="about-section">
+                <p class="section-eyebrow reveal">data, decisions, and detours</p>
+                <p class="adventure-lead reveal">A few themes shaped how I got here. Pick one.</p>
+
+                <div class="theme-chips reveal" role="tablist">
+                    <button type="button" class="theme-chip active" data-theme="leadership">Leadership</button>
+                    <button type="button" class="theme-chip" data-theme="synthesis">Synthesis</button>
+                    <button type="button" class="theme-chip" data-theme="adaptability">Adaptability</button>
+                    <button type="button" class="theme-chip" data-theme="people">People skills</button>
                 </div>
+
+                <div class="theme-reveal reveal">
+                    <p class="theme-reveal-label" id="theme-reveal-label">leadership</p>
+                    <p class="theme-reveal-text" id="theme-reveal-text">Even in high school, I was sharpening my thinking through programs like Teach For America — the kind of leadership work that gave me the courage to stand behind my beliefs. Leadership, conviction, and character aren't just qualities of a good leader; they're the foundation of a good analyst too.</p>
+                </div>
+
+                <p class="adventure-close reveal">My focus stays the same: create data-driven solutions that don't just solve problems, but leave something that actually matters.</p>
             </section>
 
-            <!-- My Path Section -->
-            <section id="path-section" class="content-section">
-                <div class="section-inner-content">
-                    <h3>My Path</h3>
-                    <p>
-                        At the age of 7, my journey into the world of technology began. My stepfather worked for Verizon, selling cutting-edge telecommunication devices—imagine FaceTime, but on a device that looked more like a sleek, early laptop. This was a time when computers were far from the marvels they are today. Yet, the very notion of a device with such advanced capabilities captivated my young mind, igniting a spark of curiosity. I was determined to unravel the mystery behind its inner workings. How was it possible? Why did it work this way? These questions fueled my fascination, and the more I interacted with that device, the deeper my intrigue grew. By the age of 8, my stepfather brought home a Dell Optiplex computer. The moment I sat in front of that screen, my world changed forever. Browsing the web for the first time felt nothing short of magical. It was as though the entire world lay before me, just a click away. I spent hours on sites like Poptropica, Club Penguin, IMVU, and Wizard 101, exploring virtual realms and connecting with people far beyond my reach. I was hooked—not just on the fun and games, but on the boundless possibilities that computers offered. As my love for technology grew, so did my internal conflict. While I was mesmerized by the world of computers and coding, my heart was set on law. From a young age, I had envisioned myself as a lawyer, fighting for justice and making a difference. But the pull of technology never truly left me. At 13, I bought a "Code for Dummies" book, diving into Python, CSS, and JavaScript. I taught myself the basics, yet, at 15, I chose to set aside coding to focus on my dream of becoming a lawyer. It wasn’t until my freshman year of college that my world took a turn once more. I sat in a business class when a professor gave a presentation about the IT & Analytics programs. In that moment, everything I had loved about computers and coding came rushing back, reigniting a passion I thought I had left behind. That very night, I changed my major and never looked back. This was more than just a decision—it was a homecoming to the world I had always belonged in. Now, my mission is clear: to combine the analytical rigor of technology with the creativity and innovation that first drew me in all those years ago. My story is just beginning.
-                    </p>
-                </div>
-            </section>
-            
-            <!-- Analytical Adventure Section -->
-            <section id="analytical-adventure-section" class="content-section">
-                <div class="section-inner-content">
-                    <h3>Data, Decisions, and Detours: My Analytical Adventure</h3>
-                    <p>My analytical experience truly began during my freshman year of college, but my journey toward becoming the professional I am today started long before that. As I mentioned before, my younger self was torn between two distinct paths—law or technology. Ultimately, I pursued law, but deep down, I knew my ultimate purpose was to create a meaningful impact, something far-reaching. Even during high school, I was sharpening my critical thinking skills. I took part in leadership programs like Teach For America, which expanded my mind and gave me the courage to stand behind my beliefs. Leadership, conviction, and character—these are not just essential qualities of a great leader; they form the foundation of a great analyst. In college, I began to grow technically. I dove headfirst into real-world applications—building financial reports and working on various projects that pushed me to connect theory with practical, repeatable insights. During my undergrad, I also had the privilege of working as a Project Manager Assistant at Commonwealth University of Pennsylvania, where I contributed to the OneSIS/Banner project. That experience taught me invaluable lessons about managing complexity, balancing competing priorities, and understanding how granular details affect broader outcomes. It sharpened my ability to synthesize information—an essential skill for any analyst. After college, I took a sales position in the energy sector, which opened my eyes in ways I hadn’t expected. It wasn’t just about numbers anymore—it was about people. I learned how to navigate different personalities, tailor approaches to specific individuals and quickly think on my feet. During my first week solo on the job, I was sent on a road trip to Bloomsburg—a trial by fire if ever there was one! I will admit, my first two days were tough. But instead of succumbing to the pressure, I stepped back, reassessed the situation, and consulted with my coach. Together, we developed a plan. By the last three days, I had turned things around, producing consistent, repeatable results. That breakthrough not only earned me a promotion to Business Sales Account Manager but also made me the top earner for the week. It was a powerful reminder of the importance of adaptability. Taking a step back and reevaluating a situation before jumping to solutions—this is what separates good analysis from great analysis. The experience taught me that success, whether in sales or analytics, hinges on your ability to assess what’s happening beneath the surface and identify which actionable insights will drive meaningful results. As I continue on my analytical journey, my focus remains the same: to create impactful, data-driven solutions that not only solve problems but leave a lasting, meaningful impact. After all, that’s the ultimate goal—to make a difference that truly matters.
-                    </p>
-                </div>
-            </section>
+        </div>
 
-        <!-- Footer and Copyright (Keep unchanged) -->
-        <footer id="footer">
+        <!-- Footer and Copyright -->
+        <footer id="footer" class="reveal">
             <section>
                 <h3>Social</h3>
                 <ul class="icons alt">
@@ -80,10 +139,10 @@
         <div id="copyright">
             <ul><li>&copy; Alvin Hartridge, JR.</li><li>CREATED & EDITED BY: Alvin Hartridge, JR.</li></ul>
         </div>
-        
+
     </div>
 
-    <!-- Scripts (Keep unchanged) -->
+    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>
     <script src="assets/js/jquery.scrolly.min.js"></script>
@@ -92,14 +151,103 @@
     <script src="assets/js/util.js"></script>
     <script src="assets/js/main.js"></script>
 
+    <script>
+        (function () {
+            var nav = document.querySelector('.sticky-nav');
+            if (!nav) return;
+            function updateNavState() {
+                nav.classList.toggle('is-scrolled', window.scrollY > 40);
+            }
+            updateNavState();
+            window.addEventListener('scroll', updateNavState, { passive: true });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var revealEls = document.querySelectorAll('.reveal');
+            if (!revealEls.length) return;
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('is-visible');
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.15 });
+
+                revealEls.forEach(function (el) {
+                    observer.observe(el);
+                });
+            } else {
+                revealEls.forEach(function (el) {
+                    el.classList.add('is-visible');
+                });
+            }
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var sections = document.querySelectorAll('.about-section');
+            var dots = document.querySelectorAll('.progress-dot');
+            if (!sections.length || !dots.length) return;
+
+            if ('IntersectionObserver' in window) {
+                var observer = new IntersectionObserver(function (entries) {
+                    entries.forEach(function (entry) {
+                        if (entry.isIntersecting) {
+                            dots.forEach(function (dot) {
+                                dot.classList.toggle('active', dot.getAttribute('data-target') === entry.target.id);
+                            });
+                        }
+                    });
+                }, { threshold: 0.5 });
+
+                sections.forEach(function (section) {
+                    observer.observe(section);
+                });
+            }
+
+            dots.forEach(function (dot) {
+                dot.addEventListener('click', function () {
+                    var target = document.getElementById(dot.getAttribute('data-target'));
+                    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                });
+            });
+        })();
+    </script>
+
+    <script>
+        (function () {
+            var chips = document.querySelectorAll('.theme-chip');
+            var label = document.getElementById('theme-reveal-label');
+            var text = document.getElementById('theme-reveal-text');
+            if (!chips.length || !label || !text) return;
+
+            var stories = {
+                leadership: "Even in high school, I was sharpening my thinking through programs like Teach For America \u2014 the kind of leadership work that gave me the courage to stand behind my beliefs. Leadership, conviction, and character aren't just qualities of a good leader; they're the foundation of a good analyst too.",
+                synthesis: "In college I started building financial reports and working on real-world projects that connected theory to practical, repeatable insight. As a Project Manager Assistant at Commonwealth University of Pennsylvania on the OneSIS/Banner project, I learned how granular details ripple into broader outcomes \u2014 and how to synthesize it all into something usable.",
+                adaptability: "My first week solo in energy sales, I was sent on a trial-by-fire trip to Bloomsburg. The first two days were rough. Instead of pushing through blind, I stepped back, reassessed, and built a plan with my coach. By the last three days, I was the top earner for the week \u2014 and earned a promotion to Business Sales Account Manager.",
+                people: "Energy sales taught me it was never just about the numbers \u2014 it was about people. Reading different personalities, tailoring my approach, thinking on my feet. That instinct for what's happening beneath the surface is exactly what separates good analysis from great analysis."
+            };
+
+            chips.forEach(function (chip) {
+                chip.addEventListener('click', function () {
+                    var theme = chip.getAttribute('data-theme');
+
+                    chips.forEach(function (c) {
+                        c.classList.toggle('active', c === chip);
+                    });
+
+                    label.textContent = chip.textContent.toLowerCase();
+                    text.textContent = stories[theme] || '';
+                });
+            });
+        })();
+    </script>
+
 </body>
 </html>
-
-
-
-
-
-
-
-
-
