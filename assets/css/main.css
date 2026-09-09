@@ -5398,20 +5398,25 @@ body#about-body {
 }
 
 #about-content {
-    padding: 0 4vw 0 12vw;
+    padding: 0 1.5rem;
     width: 100%;
     box-sizing: border-box;
     max-width: 1500px;
-}
-
-@media screen and (max-width: 900px) {
-    #about-content {
-        padding: 0 6vw;
-    }
+    margin: 0 auto;
 }
 
 .about-section {
-    padding: 5rem 1.5rem;
+    padding: 5rem 0;
+}
+
+#about-intro {
+    padding-left: clamp(1.5rem, 8vw, 220px);
+}
+
+@media screen and (max-width: 900px) {
+    #about-intro {
+        padding-left: 0;
+    }
 }
 
 .section-eyebrow {
