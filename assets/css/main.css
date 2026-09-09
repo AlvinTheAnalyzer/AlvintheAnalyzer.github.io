@@ -5388,135 +5388,278 @@ body#about-body {
 }
 
 /* Main content area for about page */
+#about-body {
+    background-color: #061412;
+    color: #E8F2EE;
+    font-family: 'Nunito Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 #about-content {
-    padding: 0; /* Remove default padding from the main content div */
-    width: 100%; /* Ensure it takes full available width */
-    box-sizing: border-box; /* Include padding/border in element's total width/height */
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    max-width: 720px;
+    margin: 0 auto;
 }
 
-/* Styling for header section */
-.about-main-header {
-    background-color: #ffffff; /* White background for the header section */
-    padding: 4em 0; /* Adjust padding as needed for vertical spacing */
-    text-align: center; /* Center align header content by default */
+.about-section {
+    padding: 5rem 1.5rem;
 }
 
-.about-main-header .header-content {
-    display: flex; /* Use flexbox for image and text alignment */
-    align-items: center; /* Vertically align items */
-    justify-content: center; /* Horizontally center content */
-    max-width: 90%; /* Constrain content width */
-    margin: 0 auto; /* Center the content container */
-    gap: 3em; /* Space between image and text */
+.section-eyebrow {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
+    color: #7C9490;
+    margin: 0 0 1.5rem;
 }
 
-.about-main-header .profile-picture {
-    width: 750px; /* Good size for the picture */
-    height: 800px; /* Maintain aspect ratio */
-    object-fit: cover; /* Cover the area, cropping if necessary */
-    border-radius: 8px; /* Slightly rounded corners for the picture */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+/* Progress dots */
+.about-progress {
+    position: fixed;
+    top: 50%;
+    right: 24px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    z-index: 100;
 }
 
-.about-main-header .header-text h2 {
-    font-size: 3em; /* Make the title bold and prominent */
-    margin-bottom: 0.2em; /* Space between title and subtitle */
-    color: #000000; /* Darker color for prominence */
+.progress-dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #1E3D36;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.about-main-header .header-text p {
-    font-size: 1.2em;
-    color: #666;
-}
-
-/* Styling for content sections (Background, Path, Data, Q&A, Quotes) */
-.content-section {
-    background-color: #ffffff; /* White background for all content sections */
-    padding: 3em 0; /* Vertical padding for sections */
-    border-top: 1px solid #eee; /* Subtle separator between sections */
-}
-
-.content-section:first-of-type {
-    border-top: none; /* No border for the first content section */
-}
-
-.content-section .section-inner-content {
-    max-width: 80%; /* Control content width for readability */
-    margin: 0 auto; /* Center the content */
-    line-height: 1.7; /* Improve readability of text */
-    color: #444; /* Darker text for readability */
-}
-
-.content-section h3 {
-    font-size: 2em;
-    margin-bottom: 1em;
-    color: #333;
-    text-align: center; /* Center align section titles */
-}
-
-/* Specific adjustments for text flow */
-.content-section p {
-    margin-bottom: 1em; /* Add space between paragraphs */
-    text-align: justify; /* Justify text for a cleaner look */
-}
-
-/* Q&A and Quotes Specific Styling */
-#qa-section h4 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-    color: #555;
-}
-
-#quotes-section blockquote {
-    font-style: italic;
-    margin: 1.5em 0;
-    padding-left: 1em;
-    border-left: 4px solid #ccc;
-    color: #555;
-}
-
-/* Responsive adjustments for smaller screens */
-@media screen and (max-width: 980px) {
-    .about-main-header .header-content {
-        flex-direction: column; /* Stack image and text vertically */
-        text-align: center;
-        gap: 1.5em;
-    }
-
-    .about-main-header .profile-picture {
-        width: 180px;
-        height: 180px;
-    }
-
-    .about-main-header .header-text h2 {
-        font-size: 2.5em;
-    }
-
-    .content-section .section-inner-content {
-        max-width: 90%; /* Wider content area on smaller screens */
-    }
+.progress-dot.active {
+    background-color: #C5FF6B;
+    transform: scale(1.4);
 }
 
 @media screen and (max-width: 736px) {
-    .about-main-header {
-        padding: 3em 0;
+    .about-progress {
+        display: none;
+    }
+}
+
+/* Intro - photo flows inline with text */
+.about-intro-flow {
+    overflow: hidden;
+}
+
+.about-photo {
+    float: right;
+    width: 150px;
+    border-radius: 14px;
+    margin: 4px 0 16px 24px;
+    border: 1px solid rgba(197, 255, 107, 0.25);
+}
+
+.about-intro-text {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 1.4rem;
+    line-height: 1.55;
+    color: #E8F2EE;
+    margin: 0;
+}
+
+.about-intro-text .accent {
+    color: #C5FF6B;
+}
+
+/* My Path - modern timeline */
+.path-timeline {
+    position: relative;
+    padding: 1rem 0;
+}
+
+.timeline-line {
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 1px;
+    background: linear-gradient(180deg, transparent, #1E3D36 10%, #1E3D36 90%, transparent);
+}
+
+.timeline-item {
+    display: grid;
+    grid-template-columns: 1fr 32px 1fr;
+    align-items: center;
+    margin-bottom: 3rem;
+    position: relative;
+}
+
+.timeline-content {
+    max-width: 340px;
+}
+
+.timeline-item.is-left .timeline-content {
+    text-align: right;
+    padding-right: 24px;
+    margin-left: auto;
+}
+
+.timeline-item.is-right .timeline-content {
+    text-align: left;
+    padding-left: 24px;
+}
+
+.timeline-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #1E3D36;
+    border: 1.5px solid #4A625B;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+}
+
+.timeline-dot.is-glow {
+    background-color: #C5FF6B;
+    border-color: #C5FF6B;
+    box-shadow: 0 0 0 4px rgba(197, 255, 107, 0.15);
+}
+
+.timeline-age {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #C5FF6B;
+    margin: 0 0 4px;
+}
+
+.timeline-title {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 1rem;
+    color: #E8F2EE;
+    margin: 0;
+}
+
+.timeline-desc {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: #9CAEA8;
+    margin: 6px 0 0;
+}
+
+/* Data, Decisions, and Detours - theme chips */
+.adventure-lead {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 1.15rem;
+    color: #E8F2EE;
+    margin: 0 0 1.75rem;
+}
+
+.theme-chips {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 1.75rem;
+}
+
+.theme-chip {
+    font-family: 'Nunito Sans', sans-serif;
+    background: transparent;
+    border: 1px solid #1E3D36;
+    color: #9CAEA8;
+    font-size: 0.85rem;
+    padding: 7px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-chip:hover {
+    border-color: #4A625B;
+    color: #E8F2EE;
+}
+
+.theme-chip.active {
+    background-color: rgba(197, 255, 107, 0.12);
+    border-color: #C5FF6B;
+    color: #C5FF6B;
+}
+
+.theme-reveal {
+    border-left: 2px solid #C5FF6B;
+    padding-left: 20px;
+    max-width: 480px;
+}
+
+.theme-reveal-label {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.75rem;
+    color: #7C9490;
+    margin: 0 0 6px;
+}
+
+.theme-reveal-text {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #E8F2EE;
+    margin: 0;
+}
+
+.adventure-close {
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 500;
+    font-size: 1.05rem;
+    color: #9CAEA8;
+    margin: 3rem 0 0;
+    max-width: 480px;
+}
+
+@media screen and (max-width: 736px) {
+    .about-section {
+        padding: 3.5rem 1.25rem;
     }
 
-    .about-main-header .profile-picture {
-        width: 150px;
-        height: 150px;
+    .about-intro-text {
+        font-size: 1.2rem;
     }
 
-    .about-main-header .header-text h2 {
-        font-size: 2em;
+    .about-photo {
+        width: 110px;
     }
 
-    .content-section {
-        padding: 2em 0;
+    .timeline-item {
+        grid-template-columns: 24px 1fr;
     }
 
-    .content-section h3 {
-        font-size: 1.8em;
+    .timeline-line {
+        left: 12px;
+    }
+
+    .timeline-item.is-left .timeline-content,
+    .timeline-item.is-right .timeline-content {
+        grid-column: 2;
+        text-align: left;
+        padding-left: 16px;
+        padding-right: 0;
+        margin-left: 0;
+        max-width: none;
+    }
+
+    .timeline-item.is-left .timeline-dot,
+    .timeline-item.is-right .timeline-dot {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .timeline-spacer {
+        display: none;
     }
 }
 
